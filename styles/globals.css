@@ -11,6 +11,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: poppins, sans-serif;
+  background-color: #e7e7e7;
 }
 
 .link {

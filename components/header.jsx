@@ -52,6 +52,7 @@ const Nav = () => {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          box-shadow: 0px 10px 32px rgb(255 255 255);
         }
 
         .nav ul {

@@ -33,7 +33,11 @@ const footer = () => {
           padding: 15px 0;
           font-size: 12px;
           color: #898989;
+          overflow: auto;
+          z-index: 1;
+          box-shadow: 0px -17px 14px rgb(255 255 255);
         }
+
         .time {
           padding-right: 35px;
         }

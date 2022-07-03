@@ -16,8 +16,8 @@ const Layouts = ({ children }) => {
       <style jsx>{`
         .main {
           padding: 70px 20% 0 20%;
-          background-color: #e7e7e7;
           height: 100vh;
+          position: relative;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -36,10 +36,14 @@ const Layouts = ({ children }) => {
 
         .nav {
           padding: 30px 30px 0 30px;
+          z-index: 1;
         }
         .children {
+          position: relative;
           padding: 40px 50px;
           flex: 1;
+          overflow: auto;
+          content: contain;
         }
       `}</style>
     </div>
