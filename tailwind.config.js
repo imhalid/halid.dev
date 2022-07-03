@@ -14,6 +14,8 @@ module.exports = {
       mediumBlack: "#222222",
       white: "#FFFFFF",
       lightGray: "#F5F5F5",
+      bgColor: "#AEAEAE",
+      red: "#FF0000",
     },
   },
   plugins: [],

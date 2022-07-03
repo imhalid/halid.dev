@@ -1,20 +1,42 @@
 import classNames from "../util/classNames";
+import Link from "next/link";
 
-const Nav = ({ children }) => {
+const navItems = [
+  {
+    name: "カリード",
+    href: "/",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+    class: "pl-20",
+  },
+  {
+    name: "Photos",
+    href: "/photos",
+  },
+  {
+    name: "Snippets",
+    href: "/snippets",
+  },
+];
+
+const Nav = () => {
   return (
     <div
       className={classNames(
         "w-100",
-        "bg-lightGreen px-5 py-3 rounded-xl text-white",
-        "border-collapse border-2 border-darkGreen border-dashed",
-        "dark:"
+        "bg-mediumBlack px-5 py-3 rounded-xl text-white"
       )}
     >
       <ul className="flex space-x-4">
-        <li className="drop-shadow-lg">カリード</li>
-        <li className="drop-shadow-lg">Blog</li>
-        <li className="drop-shadow-lg">Photos</li>
-        <li className="drop-shadow-lg">Snippets</li>
+        {navItems.map((item) => (
+          <li key={item.name} className={item.class}>
+            <Link href={item.href}>
+              <a>{item.name}</a>
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
