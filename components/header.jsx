@@ -5,39 +5,84 @@ const navItems = [
   {
     name: "カリード",
     href: "/",
+    class: "navLink",
   },
   {
     name: "Blog",
     href: "/blog",
-    class: "pl-20",
+    class: "navLink",
+    // color: "#0ad",
   },
   {
     name: "Photos",
     href: "/photos",
+    class: "navLink",
   },
   {
     name: "Snippets",
     href: "/snippets",
+    class: "navLink",
   },
 ];
 
 const Nav = () => {
   return (
-    <div
-      className={classNames(
-        "w-100",
-        "bg-mediumBlack px-5 py-3 rounded-xl text-white"
-      )}
-    >
+    <div className="nav">
       <ul className="flex space-x-4">
         {navItems.map((item) => (
-          <li key={item.name} className={item.class}>
+          <li key={item.name}>
             <Link href={item.href}>
-              <a>{item.name}</a>
+              <a
+                className={item.class}
+                // style={{ "background-color": item.color }}
+              >
+                {item.name}
+              </a>
             </Link>
           </li>
         ))}
       </ul>
+      <style jsx>{`
+        .nav {
+          color: #fff;
+          border-radius: 10px;
+          padding: 0.15rem 0.5rem;
+          background-color: #000;
+          height: 52px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .nav ul {
+          display: flex;
+          align-items: center;
+        }
+
+        .nav ul li:first-child {
+          flex: 1;
+          font-weight: 700;
+          font-size: 1.5rem;
+          font-family: Inter, sans-serif;
+          letter-spacing: -2px;
+        }
+
+        .nav ul li:last-child {
+          padding-right: 10px;
+        }
+
+        .navLink {
+          transition: all 0.2s ease-in-out;
+          opacity: 0.9;
+          font-weight: 500;
+          // padding: 6px 5px;
+          // border-radius: 5px;
+        }
+
+        .navLink:hover {
+          opacity: 1;
+        }
+      `}</style>
     </div>
   );
 };

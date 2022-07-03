@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: poppins, sans-serif;
+}
+
+.link {
+  border-bottom: 1px solid #c9c9c950;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.link:hover {
+  border-bottom: 1px solid #c9c9c9;
+}

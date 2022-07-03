@@ -29,17 +29,16 @@ const Layouts = ({ children }) => {
           justify-content: space-between;
           background-color: #fff;
           height: 100%;
-          max-width: 750px;
-          border-top-left-radius: 30px;
-          border-top-right-radius: 30px;
+          max-width: 720px;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
         }
 
         .nav {
           padding: 30px 30px 0 30px;
         }
-
         .children {
-          padding: 30px;
+          padding: 40px 50px;
           flex: 1;
         }
       `}</style>
