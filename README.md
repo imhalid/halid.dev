@@ -16,3 +16,5 @@
 - [ ] Connect With Firebase
 - [ ] Responsive Design
 - [ ] Night Mode
+- [ ] Add a 404 page
+- [ ] Strapi CMS
