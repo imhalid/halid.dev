@@ -3,6 +3,7 @@ import Head from "next/head";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Gallery from "react-photo-gallery";
+import { motion } from "framer-motion";
 
 const Photos = () => {
   const [photos, setPhotos] = useState([]);
@@ -33,8 +34,8 @@ const Photos = () => {
       src: data.urls.regular,
       width: data.width,
       height: data.height,
-      class:
-        "hover:brightness-110 hover:scale-[0.97] saturate-0 hover:saturate-100 transition",
+      className:
+        "hover:brightness-110 hover:scale-[0.97] saturate-0 hover:saturate-100 transition gallery",
     };
   });
 
@@ -43,9 +44,14 @@ const Photos = () => {
       <Head>
         <title>Photos</title>
       </Head>
-      <div className="">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        viewport={{ once: true }}
+      >
         <Gallery photos={photo} />
-      </div>
+      </motion.div>
       <style jsx>{``}</style>
     </Layouts>
   );

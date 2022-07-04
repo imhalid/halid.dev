@@ -44,10 +44,10 @@ const Nav = () => {
       </ul>
       <style jsx>{`
         .nav {
-          color: #fff;
+          color: ##313131;
           border-radius: 10px;
           padding: 0.15rem 0.5rem;
-          background-color: #000;
+          background-color: #f7f7f7;
           height: 52px;
           display: flex;
           flex-direction: column;

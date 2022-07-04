@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 import Layouts from "../components/Layouts";
 
 const Home = () => {
@@ -12,7 +12,24 @@ const Home = () => {
           <title>Home</title>
         </Head>
         <article>
-          <h1 className="text-3xl">Hello 🙂</h1>
+          <h1 className="text-3xl">
+            Hello{" "}
+            <motion.div
+              drag
+              dragConstraints={{
+                top: -50,
+                left: -50,
+                right: 50,
+                bottom: 50,
+              }}
+              style={{
+                display: "inline-block",
+                cursor: "grab",
+              }}
+            >
+              🙂
+            </motion.div>
+          </h1>
           <p>
             I love great designs and apps, passionately write code, and fight
             bugs. I like to deal with UI and animations.
