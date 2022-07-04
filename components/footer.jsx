@@ -22,7 +22,7 @@ const footer = () => {
           2022-PRESENT © Halid Icli
         </div>
         <div className="time">
-          {year} {fullTime} {min}
+          Locale: {min} {fullTime}
         </div>
       </div>
       <style jsx>{`

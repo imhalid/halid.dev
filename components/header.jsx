@@ -44,15 +44,15 @@ const Nav = () => {
       </ul>
       <style jsx>{`
         .nav {
-          color: ##313131;
+          color: #455d83;
           border-radius: 10px;
           padding: 0.15rem 0.5rem;
-          background-color: #f7f7f7;
+          background-color: #e2ecfc;
           height: 52px;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          box-shadow: 0px 10px 32px rgb(255 255 255);
+          border: 2px solid #455d83;
         }
 
         .nav ul {

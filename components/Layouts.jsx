@@ -3,9 +3,9 @@ import Footer from "./footer";
 import { motion } from "framer-motion";
 
 const variants = {
-  hidden: { opacity: 0, x: 0, y: 100, scale: 0.9 },
+  hidden: { opacity: 0, x: 0, y: 0, scale: 0.9 },
   enter: { opacity: 1, x: 0, y: 0, scale: 1 },
-  exit: { opacity: 0, x: 0, y: 0, scale: 1.1 },
+  exit: { opacity: 0, x: 0, y: 0, scale: 0.9 },
   whileInView: { opacity: 1, x: 0, y: 0, scale: 1 },
   viewport: { once: true },
 };

@@ -35,7 +35,7 @@ const Photos = () => {
       width: data.width,
       height: data.height,
       className:
-        "hover:brightness-110 hover:scale-[0.97] saturate-0 hover:saturate-100 transition gallery",
+        "hover:brightness-110 hover:scale-[0.97] saturate-90 hover:saturate-100 transition ",
     };
   });
 
@@ -44,12 +44,7 @@ const Photos = () => {
       <Head>
         <title>Photos</title>
       </Head>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        viewport={{ once: true }}
-      >
+      <motion.div>
         <Gallery photos={photo} />
       </motion.div>
       <style jsx>{``}</style>
