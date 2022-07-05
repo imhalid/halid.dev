@@ -36,10 +36,7 @@ const Home = () => {
             Focused on creating fluid and accessible interfaces. Interested in
             3D modeling.
           </p>
-          <p>
-            Interested in Javascript, CSS and NextJS. Curious about SwiftUI.
-            Building products using React and Next.js.
-          </p>
+
           <p>
             Outside of programming, I enjoy doing photography and traveling.
             Some of my photos can be found on{" "}
