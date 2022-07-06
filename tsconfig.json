@@ -13,14 +13,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "pages/_app.jsx",
-    "pages/index.jsx"
+    "pages/index.jsx",
+    ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }

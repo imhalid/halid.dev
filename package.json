@@ -8,8 +8,10 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.2",
     "axios": "^0.27.2",
+    "contentlayer": "^0.2.5",
     "framer-motion": "^6.3.16",
     "next": "latest",
+    "next-contentlayer": "^0.2.5",
     "next-mdx": "^0.6.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",

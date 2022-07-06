@@ -1,17 +1,27 @@
+import { allPosts } from "contentlayer/generated";
+import Link from "next/link";
 import Layouts from "../../components/Layouts";
 
-import Head from "next/head";
-import Link from "next/link";
-//https://github.com/shadcn/next-mdx
-const Blog = () => {
-  return (
-    <Layouts>
-      <Head>
-        <title>Blog</title>
-      </Head>
-      <div className="space-y-6"></div>
-    </Layouts>
-  );
+export const getStaticProps = () => {
+  return { props: { posts: allPosts } };
 };
 
-export default Blog;
+export default function PostListPage({ posts }) {
+  return (
+    <Layouts>
+      <div>
+        <h1>Blog</h1>
+
+        {posts.map((post) => (
+          <div key={post.slug}>
+            <h2>
+              <Link href={`/blog/${post.slug}`}>
+                <a>{post.title}</a>
+              </Link>
+            </h2>
+          </div>
+        ))}
+      </div>
+    </Layouts>
+  );
+}
