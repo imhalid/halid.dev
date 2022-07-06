@@ -44,6 +44,25 @@ const footer = () => {
         .credit {
           padding-left: 35px;
         }
+        @media (max-width: 768px) {
+          .container {
+            display: flex;
+
+            border-top: 1px solid #efefef;
+            padding: 15px 0;
+            font-size: 11px;
+            color: #898989;
+            overflow: auto;
+            z-index: 1;
+            box-shadow: 0px -17px 14px rgb(255 255 255);
+          }
+          .time {
+            padding-right: 15px;
+          }
+          .credit {
+            padding-left: 15px;
+          }
+        }
       `}</style>
     </>
   );

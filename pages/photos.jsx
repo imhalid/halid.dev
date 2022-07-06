@@ -2,12 +2,13 @@ import Layouts from "../components/Layouts";
 import Head from "next/head";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Gallery from "react-photo-gallery";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 const Photos = () => {
   const [photos, setPhotos] = useState([]);
-
+  const [ref, inView] = useInView({ rootMargin: "110%" });
   const getPhotos = async () => {
     const key = process.env.NEXT_PUBLIC_UNSPLASH_key_ID;
 
@@ -45,7 +46,23 @@ const Photos = () => {
         <title>Photos</title>
       </Head>
       <motion.div>
-        <Gallery photos={photo} />
+        <div className="">
+          {photo.map((data) => {
+            return (
+              <div className="item">
+                <Image
+                  ref={ref}
+                  src={data.src}
+                  alt="photo"
+                  className={data.className}
+                  width={data.width}
+                  height={data.height}
+                  // placeholder="blur"
+                />
+              </div>
+            );
+          })}
+        </div>
       </motion.div>
       <style jsx>{``}</style>
     </Layouts>
