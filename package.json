@@ -15,6 +15,7 @@
     "next-mdx": "^0.6.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-icons": "^4.4.0",
     "react-intersection-observer": "^9.3.5"
   },
   "devDependencies": {

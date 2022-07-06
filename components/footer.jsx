@@ -1,4 +1,5 @@
 import Link from "next/link";
+import classNames from "../util/classNames";
 
 const footer = () => {
   var time = new Date();
@@ -14,56 +15,21 @@ const footer = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="credit">
+      <div
+        className={classNames(
+          "flex justify-between border-t py-4 text-xs text-slate-600"
+        )}
+      >
+        <div className={classNames("sm:pl-8", "pl-5")}>
           <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">
             <a className="link">CC BY-NC-SA 4.0</a>
           </Link>{" "}
           2022-PRESENT © Halid Icli
         </div>
-        <div className="time">
+        <div className={classNames("sm:pr-8", "pr-5")}>
           Locale: {min} {fullTime}
         </div>
       </div>
-      <style jsx>{`
-        .container {
-          display: flex;
-          justify-content: space-between;
-          border-top: 1px solid #efefef;
-          padding: 15px 0;
-          font-size: 12px;
-          color: #898989;
-          overflow: auto;
-          z-index: 1;
-          box-shadow: 0px -17px 14px rgb(255 255 255);
-        }
-
-        .time {
-          padding-right: 35px;
-        }
-        .credit {
-          padding-left: 35px;
-        }
-        @media (max-width: 768px) {
-          .container {
-            display: flex;
-
-            border-top: 1px solid #efefef;
-            padding: 15px 0;
-            font-size: 11px;
-            color: #898989;
-            overflow: auto;
-            z-index: 1;
-            box-shadow: 0px -17px 14px rgb(255 255 255);
-          }
-          .time {
-            padding-right: 15px;
-          }
-          .credit {
-            padding-left: 15px;
-          }
-        }
-      `}</style>
     </>
   );
 };

@@ -1,36 +1,43 @@
 import classNames from "../util/classNames";
 import Link from "next/link";
 
+const navLink = classNames("text-white hover:text-amber");
+
 const navItems = [
   {
     name: "カリード",
     href: "/",
-    class: "navLink",
+    class: navLink,
   },
   {
     name: "Blog",
     href: "/blog",
-    class: "navLink",
+    class: navLink,
     // color: "#0ad",
   },
   {
     name: "Photos",
     href: "/photos",
-    class: "navLink",
+    class: navLink,
   },
   {
     name: "Snippets",
     href: "/snippets",
-    class: "navLink",
+    class: navLink,
   },
 ];
 
 const Nav = () => {
   return (
-    <div className="nav ">
-      <ul className="flex space-x-4">
+    <div
+      className={classNames(
+        " flex flex-col justify-center py-1 px-3  rounded-xl h-12 text-base ",
+        "text-white shadow-md backdrop-blur bg-slate-500/50"
+      )}
+    >
+      <ul className="flex justify-center space-x-4">
         {navItems.map((item) => (
-          <li key={item.name}>
+          <li className="first:flex-1 last:pr-2" key={item.name}>
             <Link href={item.href}>
               <a
                 className={item.class}
@@ -42,68 +49,6 @@ const Nav = () => {
           </li>
         ))}
       </ul>
-      <style jsx>{`
-        .nav {
-          color: #fff;
-          font-size: 1.1rem;
-          border-radius: 10px;
-          padding: 0.15rem 0.5rem;
-          background: rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          backdrop-filter: blur(5px);
-          -webkit-backdrop-filter: blur(5px);
-          height: 52px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          // border: 2px solid #455d83;
-        }
-
-        .nav ul {
-          display: flex;
-          align-items: center;
-          font-weight: bold;
-        }
-
-        .nav ul li:first-child {
-          flex: 1;
-          font-size: 1.5rem;
-          letter-spacing: -2px;
-        }
-
-        .nav ul li:last-child {
-          padding-right: 10px;
-        }
-
-        .navLink {
-          transition: all 0.2s ease-in-out;
-          opacity: 0.9;
-          font-weight: 500;
-          // padding: 6px 5px;
-          // border-radius: 5px;
-        }
-
-        .navLink:hover {
-          opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-          .nav {
-            border-radius: 5px;
-            padding: 0.15rem 0.5rem;
-            height: 42px;
-          }
-          .nav ul li:first-child {
-            flex: 1;
-            font-size: 1.2rem;
-            letter-spacing: -2px;
-          }
-
-          .nav ul li:last-child {
-            padding-right: 5px;
-          }
-        }
-      `}</style>
     </div>
   );
 };

@@ -28,7 +28,12 @@ const Layouts = ({ children }) => {
           <Nav />
         </div>
       </div>
-      <div className={classNames("bg-white shadow-lg", "sm:rounded-2xl")}>
+      <div
+        className={classNames(
+          "bg-white w-full  shadow-lg",
+          "sm:rounded-2xl sm:w-full  sm:mx-auto"
+        )}
+      >
         <div
           className={classNames("relative", "sm:p-12 sm:pb-5", "pt-20 px-3")}
         >
