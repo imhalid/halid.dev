@@ -10,11 +10,11 @@ const Photos = () => {
   const [photos, setPhotos] = useState([]);
   const [ref, inView] = useInView({ rootMargin: "110%" });
   const getPhotos = async () => {
-    const key = process.env.NEXT_PUBLIC_UNSPLASH_key_ID;
+    const key = process.env.API_URL;
 
     try {
       const { data } = await axios.get(
-        `https://api.unsplash.com/users/halidislam/photos?client_id=VtBRCNVPaddBueKrJ7x-oTXu3fDbQiM_Y8PQ05_arcs`
+        `https://api.unsplash.com/users/halidislam/photos?client_id=${key}`
       );
       setPhotos(data);
     } catch {

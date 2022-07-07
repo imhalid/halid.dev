@@ -1,9 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layouts from "../components/Layouts";
-import classNames from "../util/classNames";
 
 const Home = () => {
   return (
@@ -62,7 +60,6 @@ const Home = () => {
               </a>
             </Link>
           </p>
-          <p></p>
         </article>
       </div>
       <style jsx>{`

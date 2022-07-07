@@ -6,8 +6,8 @@
 - [x] Home Page
 - [x] Page Transitions
 - [x] Text Effects
-- [-] Using icons instead of text in the header (optional)
-- [ ] Fav Icon
+- [ ] Using icons instead of text in the header (optional)
+- [x] Fav Icon
 - [ ] Add Seo From Next.js
 - [x] Photos For Placeholder
 - [x] Hover Effects

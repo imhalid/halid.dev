@@ -34,7 +34,7 @@ export default function Document() {
 
       <body className="dark:bg-neutral-900 h-screen">
         <svg
-          class="pointer-events-none fixed isolate z-50 opacity-20 mix-blend-soft-light"
+          className="pointer-events-none fixed isolate z-50 opacity-20 mix-blend-soft-light"
           width="100%"
           height="100%"
         >
@@ -48,7 +48,7 @@ export default function Document() {
 
             <feDiffuseLighting
               in="noise"
-              lighting-color="white"
+              lightingColor="white"
               surfaceScale="2"
             >
               <feDistantLight azimuth="45" elevation="60" />
