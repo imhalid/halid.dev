@@ -20,7 +20,7 @@ const Layouts = ({ children }) => {
     >
       <div
         className={classNames(
-          "w-[39rem] h-36 -z-10 rounded-3xl top-0 absolute bg-gradient-to-r",
+          " h-20 -z-10 rounded-3xl w-40 sm:w-[768px] top-0 absolute bg-gradient-to-r",
           "from-blue-500  to-red-500 blur-[100px]"
         )}
       ></div>
