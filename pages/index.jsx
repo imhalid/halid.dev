@@ -13,7 +13,7 @@ const Home = () => {
           <title>Home</title>
         </Head>
         <article>
-          <h1 className="text-3xl">
+          <h1 className="text-3xl font-bold">
             Hello{" "}
             <motion.div
               drag
@@ -28,7 +28,7 @@ const Home = () => {
                 cursor: "grab",
               }}
             >
-              🙂
+              😶‍🌫️
             </motion.div>
           </h1>
           <p>
