@@ -36,7 +36,7 @@ const Photos = () => {
       width: data.width,
       height: data.height,
       className:
-        "hover:brightness-110 hover:scale-[0.97] saturate-90 hover:saturate-100 transition ",
+        "hover:brightness-110 hover:scale-[0.97] bg-center saturate-50 hover:saturate-[1] transition ",
     };
   });
 
@@ -46,11 +46,12 @@ const Photos = () => {
         <title>Photos</title>
       </Head>
       <motion.div>
+        <p className="pb-4">I like to take nature photos the most.</p>
         <div className="">
           {photo.map((data) => {
             console.log(data.blur_hash);
             return (
-              <div className="item">
+              <div className="">
                 <Image
                   src={data.src}
                   alt="photo"

@@ -4,25 +4,6 @@ import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 
-const navItems = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "Blog",
-    href: "/blog",
-  },
-  {
-    name: "Photos",
-    href: "/photos",
-  },
-  {
-    name: "Snippets",
-    href: "/snippets text-white font-medium hover:text-white/80 transition-all",
-  },
-];
-
 const Nav = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -59,7 +40,7 @@ const Nav = () => {
     <div
       className={classNames(
         "flex flex-col justify-center py-1 px-3  rounded-xl h-12 text-base ",
-        "backdrop-blur bg-neutral-500/50 border-neutral-500/50 border innerShadow"
+        "backdrop-blur bg-neutral-500/50 border-neutral-500/50 shadow-sm"
       )}
     >
       <ul className="flex justify-center items-center space-x-3 text-white font-medium">
