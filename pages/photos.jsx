@@ -4,11 +4,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
 
 const Photos = () => {
   const [photos, setPhotos] = useState([]);
-  const [ref, inView] = useInView({ rootMargin: "110%" });
+
   const getPhotos = async () => {
     const key = process.env.API_URL;
 
@@ -17,6 +16,7 @@ const Photos = () => {
         `https://api.unsplash.com/users/halidislam/photos?client_id=${key}`
       );
       setPhotos(data);
+      console.log(data);
     } catch {
       console.log("error");
     }
@@ -48,16 +48,17 @@ const Photos = () => {
       <motion.div>
         <div className="">
           {photo.map((data) => {
+            console.log(data.blur_hash);
             return (
               <div className="item">
                 <Image
-                  ref={ref}
                   src={data.src}
                   alt="photo"
                   className={data.className}
                   width={data.width}
                   height={data.height}
-                  // placeholder="blur"
+                  blurDataURL="L6A_5?%%4XV?R$R5siavD%IURQRV"
+                  placeholder="blur"
                 />
               </div>
             );

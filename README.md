@@ -6,16 +6,16 @@
 - [x] Home Page
 - [x] Page Transitions
 - [x] Text Effects
-- [ ] Using icons instead of text in the header (optional)
 - [x] Fav Icon
-- [ ] Add Seo From Next.js
-- [x] Photos For Placeholder
+- [x] Photos For BlurHash
 - [x] Hover Effects
-- [ ] Blog Template
-- [ ] Snippets Template
 - [x] Responsive Design
 - [x] Night Mode
-- [ ] Add a 404 page
+- [x] Add a 404 page
+- [ ] Add Seo From Next.js
+- [ ] Blog Template
+- [ ] Snippets Template
+- [ ] Using icons instead of text in the header (optional)
 
 ## Expert Features
 
