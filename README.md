@@ -10,11 +10,11 @@
 - [ ] Fav Icon
 - [ ] Add Seo From Next.js
 - [x] Photos For Placeholder
-- [ ] Hover Effects
+- [x] Hover Effects
 - [ ] Blog Template
 - [ ] Snippets Template
 - [x] Responsive Design
-- [ ] Night Mode
+- [x] Night Mode
 - [ ] Add a 404 page
 
 ## Expert Features

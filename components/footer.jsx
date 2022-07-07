@@ -3,7 +3,6 @@ import classNames from "../util/classNames";
 
 const footer = () => {
   var time = new Date();
-  var year = time.getFullYear();
   var fullTime = new Intl.DateTimeFormat("en-EN", {
     weekday: "short",
   }).format(time);
@@ -17,7 +16,8 @@ const footer = () => {
     <>
       <div
         className={classNames(
-          "flex justify-between border-t py-4 text-xs text-slate-600"
+          "flex justify-between border-t py-4 text-xs text-slate-600",
+          "dark:text-neutral-300 dark:border-neutral-700"
         )}
       >
         <div className={classNames("sm:pl-8", "pl-5")}>

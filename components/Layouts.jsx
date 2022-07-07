@@ -15,9 +15,15 @@ const Layouts = ({ children }) => {
     <div
       className={classNames(
         "relative flex justify-center z-10 mx-auto w-full px-0 pt-0",
-        "sm:max-w-screen-md sm:px-4 sm:pt-12 sm:mx-auto"
+        "sm:max-w-screen-md sm:px-4 sm:pb-8 sm:pt-12 sm:mx-auto"
       )}
     >
+      <div
+        className={classNames(
+          "w-[39rem] h-36 -z-10 rounded-3xl top-0 absolute bg-gradient-to-r",
+          "from-blue-500  to-red-500 blur-[100px]"
+        )}
+      ></div>
       <div className="fixed top-3 sm:top-6 z-30 w-full">
         <div
           className={classNames(
@@ -30,7 +36,8 @@ const Layouts = ({ children }) => {
       </div>
       <div
         className={classNames(
-          "bg-white w-full  shadow-lg",
+          "bg-white/50 w-full backdrop-blur shadow-lg",
+          "dark:bg-neutral-800/70 dark:border-neutral-800/50",
           "sm:rounded-2xl sm:w-full  sm:mx-auto"
         )}
       >

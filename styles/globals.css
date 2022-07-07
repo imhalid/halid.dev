@@ -13,9 +13,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Karla", sans-serif;
-  background: linear-gradient(90deg, #f9fafb 15px, transparent 1%) 50%,
-    linear-gradient(#f9fafb 15px, transparent 1%) 50%, rgba(0, 0, 0, 0.24);
-  background-size: 16px 16px;
 }
 
 .link {
@@ -26,4 +23,9 @@ html {
 
 .link:hover {
   border-bottom: 1px solid #c9c9c9;
+}
+
+.innerShadow {
+  box-shadow: 0 -7px 11px rgba(33, 33, 33, 0.1) inset,
+    0 7px 11px rgba(227, 227, 227, 0.1) inset;
 }
