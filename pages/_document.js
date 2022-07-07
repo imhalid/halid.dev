@@ -32,9 +32,9 @@ export default function Document() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <body className="dark:bg-neutral-900">
+      <body className="dark:bg-neutral-900 h-screen">
         <svg
-          class="pointer-events-none fixed isolate z-50 opacity-30 mix-blend-soft-light"
+          class="pointer-events-none fixed isolate z-50 opacity-20 mix-blend-soft-light"
           width="100%"
           height="100%"
         >

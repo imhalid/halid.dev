@@ -28,7 +28,7 @@ const Home = () => {
                 cursor: "grab",
               }}
             >
-              😶‍🌫️
+              ツ
             </motion.div>
           </h1>
           <p>

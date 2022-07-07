@@ -33,16 +33,14 @@ const Nav = () => {
 
   const renderThemeChanger = () => {
     if (!mounted) return null;
-
     const currentTheme = theme === "system" ? systemTheme : theme;
-
     if (currentTheme === "dark") {
       return (
         <button
           className="bg-gradient-to-b from-[#eaeaea] to-[#d6d6d6] text-neutral-900 p-1 rounded"
           onClick={() => setTheme("light")}
         >
-          <BiSun />
+          <BiMoon />
         </button>
       );
     } else {
@@ -51,7 +49,7 @@ const Nav = () => {
           className="bg-gradient-to-b from-[#282828] to-[#1a1a1a] text-neutral-100 p-1 rounded"
           onClick={() => setTheme("dark")}
         >
-          <BiMoon />
+          <BiSun />
         </button>
       );
     }

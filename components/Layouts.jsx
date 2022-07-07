@@ -20,8 +20,9 @@ const Layouts = ({ children }) => {
     >
       <div
         className={classNames(
-          " h-20 -z-10 rounded-3xl w-40 sm:w-[768px] top-0 absolute bg-gradient-to-r",
-          "from-blue-500  to-red-500 blur-[100px]"
+          " h-20 -z-10 rounded-3xl overflow-visible w-40 sm:w-[768px] top-0 absolute bg-gradient-to-r",
+          "from-[#26c317]  to-[#1237bf] blur-[100px]",
+          "dark:bg-gradient-to-r dark:from-[#7e43a5] dark:to-[#0517b9] dark:blur-[100px]"
         )}
       ></div>
       <div className="fixed top-3 sm:top-6 z-30 w-full">
@@ -36,8 +37,8 @@ const Layouts = ({ children }) => {
       </div>
       <div
         className={classNames(
-          "bg-white/50 w-full backdrop-blur shadow-lg",
-          "dark:bg-neutral-800/70 dark:border-neutral-800/50",
+          "bg-white/70 w-full backdrop-blur shadow-lg",
+          "dark:bg-neutral-800/80 dark:border-neutral-800/50",
           "sm:rounded-2xl sm:w-full  sm:mx-auto"
         )}
       >
