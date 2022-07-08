@@ -38,29 +38,30 @@ const Home = () => {
 
           <p>
             Outside of programming, I enjoy doing photography and traveling.
-            Some of my photos can be found on{" "}
+            Some of my photos can be found on
             <Link href="https://www.instagram.com/isuraka/">
-              <a className="link">Instagram</a>
+              <a className="link">Instagram.</a>
             </Link>
-            .
           </p>
           <p>
-            Find me on{" "}
+            Find me on
             <Link href="https://github.com/imhalid">
-              <a className="link cursor-ne-resize">GitHub</a>
+              <a className="link cursor-ne-resize"> GitHub, </a>
             </Link>
-            ,{" "}
             <Link href="https://twitter.com/halidislm">
-              <a className="link twit">Twitter</a>
-            </Link>
-            .
-            <p>I'm focused on Next.js right now. I love writing CSS and pure Javascript, dealing with designs. Looking for a job where I can improve myself.  If you want to teach me or </br >[Hire Me] </p>
-            <Link href="mailto:hi@halid.dev">
-              <a className="relative bg-gradient-to-r transition-all from-amber-500 to-rose-500 bg-clip-text text-transparent">
-                hi@halid.dev
-              </a>
+              <a className="link twit">Twitter.</a>
             </Link>
           </p>
+          <p>
+            I'm focused on Next.js right now. I love writing CSS and pure
+            Javascript, dealing with designs. Looking for a job where I can
+            improve myself. If you want to teach me or
+          </p>
+          <Link href="mailto:hi@halid.dev">
+            <a className="relative inline-block bg-gradient-to-r transition-all from-amber-500 to-rose-500 bg-clip-text text-transparent">
+              <span> [Hire Me] &gt;&gt;&gt; </span> hi@halid.dev
+            </a>
+          </Link>
         </article>
       </div>
       <style jsx>{`

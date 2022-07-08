@@ -1,21 +1,21 @@
 import NextLink from "next/link";
-
+// yazı etiketleri burada şekillendiriliyor
 export const components = {
   h1: (props) => (
     <h2
-      className="mt-12 mb-8 border-t-2 border-rose-100/[15%] pt-9 text-3xl font-medium text-rose-100/90"
+      className="mt-12 border border-red-600 mb-8 border-t-2 border-rose-100/[15%] pt-9 text-3xl font-medium text-rose-100/90"
       {...props}
     />
   ),
   h2: (props) => (
     <h3
-      className="mt-12 mb-8 border-t-2 border-rose-100/[15%] pt-9 text-2xl font-medium text-rose-100/90"
+      className="mt-12 mb-8 border border-green-600 border-t-2 border-rose-100/[15%] pt-9 text-2xl font-medium text-rose-100/90"
       {...props}
     />
   ),
   h3: (props) => (
     <h4
-      className="mt-12 mb-8 text-xl font-medium text-rose-100/90"
+      className="mt-12 mb-8 border border-amber-600 text-xl font-medium text-rose-100/90"
       {...props}
     />
   ),
