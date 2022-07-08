@@ -53,7 +53,7 @@ const Home = () => {
               <a className="link twit">Twitter</a>
             </Link>
             .
-            <p>I'm focused on Next.js right now. I love writing CSS and pure Javascript, dealing with designs. Looking for a job where I can improve myself.  If you want to teach me or [Hire Me]{" "}</p>
+            <p>I'm focused on Next.js right now. I love writing CSS and pure Javascript, dealing with designs. Looking for a job where I can improve myself.  If you want to teach me or </br >[Hire Me] </p>
             <Link href="mailto:hi@halid.dev">
               <a className="relative bg-gradient-to-r transition-all from-amber-500 to-rose-500 bg-clip-text text-transparent">
                 hi@halid.dev
