@@ -24,7 +24,7 @@ export default function SinglePostPage({ post }) {
   const MDXContent = useMDXComponent(post.body.code);
   return (
     <Layouts>
-      <article className=" ">
+      <article className="">
         {/* <h1>{post.title}</h1> */}
         <MDXContent components={{ ...components }} />
       </article>

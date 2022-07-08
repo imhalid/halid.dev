@@ -47,9 +47,7 @@ export const components = {
       {...props}
     />
   ),
-  blockquote: (props) => (
-    <blockquote className={classNames("bg-slate-200 px-5")} {...props} />
-  ),
+
   p: (props) => (
     <p
       className={classNames(
@@ -59,13 +57,40 @@ export const components = {
       {...props}
     />
   ),
+  blockquote: (props) => (
+    <blockquote
+      className={classNames(
+        "bg-slate-200 dark:bg-neutral-700/25 shadow rounded-lg text-red-700 px-5"
+      )}
+      {...props}
+    />
+  ),
 
-  hr: (props) => <hr {...props} className={classNames("")} />,
-  ul: (props) => <ul className={classNames("")} {...props} />,
-  ol: (props) => <ol className={classNames("")} {...props} />,
-  li: (props) => <li className={classNames("")} {...props} />,
-  strong: (props) => <strong className={classNames("")} {...props} />,
-  del: (props) => <del className={classNames("")} {...props} />,
+  hr: (props) => (
+    <hr {...props} className={classNames("my-6 border-t-1 border-rose-500")} />
+  ),
+  ul: (props) => <ul className={classNames("mb-6")} {...props} />,
+  ol: (props) => <ol className={classNames("mb-6")} {...props} />,
+  li: (props) => (
+    <li
+      className={classNames(
+        "relative my-3 pl-5 before:absolute before:left-1 before:top-3 before:h-1.5 before:w-1.5 before:rounded-full before:bg-blue-200"
+      )}
+      {...props}
+    />
+  ),
+  strong: (props) => <strong className={classNames("font-bold")} {...props} />,
+  del: (props) => (
+    <del className={classNames("border border-red-600")} {...props} />
+  ),
+  table: (props) => <table className={classNames("")} {...props} />,
+  th: (props) => <th className={classNames("")} {...props} />,
+  td: (props) => <td className={classNames("")} {...props} />,
+  thead: (props) => <thead className={classNames("")} {...props} />,
+  tbody: (props) => <tbody className={classNames("")} {...props} />,
+  img: (props) => (
+    <img className={classNames("rounded-xl", " shadow ")} {...props} />
+  ),
 
   a: ({ href = "", ...props }) => {
     if (href.startsWith("http")) {

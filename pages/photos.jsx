@@ -36,7 +36,7 @@ const Photos = () => {
       width: data.width,
       height: data.height,
       className:
-        "hover:brightness-110 hover:scale-[0.97] bg-center saturate-50 hover:saturate-[1] transition ",
+        "hover:brightness-110 w-[150px] h-[300px] hover:scale-[0.97] bg-center saturate-50 hover:saturate-[1] transition ",
     };
   });
 
@@ -51,13 +51,15 @@ const Photos = () => {
           {photo.map((data) => {
             console.log(data.blur_hash);
             return (
-              <div className="">
+              <div className="" key={data.src}>
                 <Image
                   src={data.src}
                   alt="photo"
                   className={data.className}
+                  // layout="responsive"
                   width={data.width}
                   height={data.height}
+                  objectFit="none"
                   blurDataURL="L6A_5?%%4XV?R$R5siavD%IURQRV"
                   placeholder="blur"
                 />
