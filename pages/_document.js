@@ -33,7 +33,7 @@ export default function Document() {
       </Head>
 
       <body className="dark:bg-neutral-900 h-screen">
-        <svg
+        {/* <svg
           className="pointer-events-none fixed isolate z-50 opacity-20 mix-blend-soft-light"
           width="100%"
           height="100%"
@@ -63,7 +63,7 @@ export default function Document() {
             filter="url(#roughpaper)"
             fill="none"
           ></rect>
-        </svg>
+        </svg> */}
         <Main />
         <NextScript />
       </body>

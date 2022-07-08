@@ -1,16 +1,17 @@
 import Layouts from "../../components/Layouts";
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
+import { components } from "../../components/MdxComponents";
 
-export const getStaticPaths = () => {
-  return {
+export const getStaticPaths = async () => {
+  return await {
     paths: allPosts.map((post) => ({ params: { slug: post.slug } })),
     fallback: false,
   };
 };
 
-export const getStaticProps = ({ params }) => {
-  const post = allPosts.find((post) => post.slug === params?.slug);
+export const getStaticProps = async ({ params }) => {
+  const post = await allPosts.find((post) => post.slug === params?.slug);
 
   if (!post) {
     return { notFound: true };
@@ -23,10 +24,10 @@ export default function SinglePostPage({ post }) {
   const MDXContent = useMDXComponent(post.body.code);
   return (
     <Layouts>
-      <div>
+      <article className="prose dark:text-white dark:prose-sky">
         <h1>{post.title}</h1>
-        <MDXContent />
-      </div>
+        <MDXContent components={{ ...components }} />
+      </article>
     </Layouts>
   );
 }

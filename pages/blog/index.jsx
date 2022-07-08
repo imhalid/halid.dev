@@ -14,7 +14,7 @@ export default function PostListPage({ posts }) {
 
         {posts.map((post) => (
           <div key={post.slug}>
-            <h2>
+            <h2 className="prose prose-rose">
               <Link href={`/blog/${post.slug}`}>
                 <a>{post.title}</a>
               </Link>

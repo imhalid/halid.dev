@@ -1,0 +1,10 @@
+/*
+ * Code block e.g. 
+ * ```js
+ *   const a = 1;
+ * ```
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
