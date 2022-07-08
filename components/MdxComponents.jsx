@@ -1,31 +1,83 @@
 import NextLink from "next/link";
+import classNames from "../util/classNames";
 // yazı etiketleri burada şekillendiriliyor
 export const components = {
   h1: (props) => (
-    <h2
-      className="mt-12 border border-red-600 mb-8 border-t-2 border-rose-100/[15%] pt-9 text-3xl font-medium text-rose-100/90"
+    <h1
+      className={classNames(
+        "text-4xl mt-8 text-neutral-800 font-medium",
+        "dark:text-sky-100"
+      )}
       {...props}
     />
   ),
   h2: (props) => (
-    <h3
-      className="mt-12 mb-8 border border-green-600 border-t-2 border-rose-100/[15%] pt-9 text-2xl font-medium text-rose-100/90"
+    <h2
+      className={classNames(
+        "text-3xl text-neutral-800 mt-8 font-medium",
+        "dark:text-sky-100"
+      )}
       {...props}
     />
   ),
   h3: (props) => (
-    <h4
-      className="mt-12 mb-8 border border-amber-600 text-xl font-medium text-rose-100/90"
+    <h3
+      className={classNames(
+        "text-2xl text-neutral-800 mt-8 font-medium",
+        "dark:text-sky-100"
+      )}
       {...props}
     />
   ),
   h4: (props) => (
-    <h5 className="mt-6 mb-5 text-lg font-medium text-rose-100/90" {...props} />
+    <h4
+      className={classNames(
+        "text-xl text-neutral-800 mt-8 font-medium",
+        "dark:text-sky-100"
+      )}
+      {...props}
+    />
   ),
-  p: (props) => <p className="mb-5 leading-7" {...props} />,
+  h5: (props) => (
+    <h5
+      className={classNames(
+        "text-lg text-neutral-800 mt-8 font-medium",
+        "dark:text-sky-100"
+      )}
+      {...props}
+    />
+  ),
+  blockquote: (props) => (
+    <blockquote className={classNames("bg-slate-200 px-5")} {...props} />
+  ),
+  p: (props) => (
+    <p
+      className={classNames(
+        "py-4 text-slate-600 leading-7",
+        "dark:text-slate-300"
+      )}
+      {...props}
+    />
+  ),
+
+  hr: (props) => <hr {...props} className={classNames("")} />,
+  ul: (props) => <ul className={classNames("")} {...props} />,
+  ol: (props) => <ol className={classNames("")} {...props} />,
+  li: (props) => <li className={classNames("")} {...props} />,
+  strong: (props) => <strong className={classNames("")} {...props} />,
+  del: (props) => <del className={classNames("")} {...props} />,
+
   a: ({ href = "", ...props }) => {
     if (href.startsWith("http")) {
-      return <a href={href} target="_blank" rel="noopener" {...props} />;
+      return (
+        <a
+          href={href}
+          className={classNames("text-blue-600 after:content-['_↗']")}
+          target="_blank"
+          rel="noopener"
+          {...props}
+        />
+      );
     }
 
     return (
@@ -34,26 +86,4 @@ export const components = {
       </NextLink>
     );
   },
-  hr: (props) => (
-    <hr {...props} className="my-12 border-t-2 border-rose-100/[15%]" />
-  ),
-  ul: (props) => <ul className="mb-6" {...props} />,
-  ol: (props) => (
-    <ol className="my-12 list-decimal pl-10 leading-7" {...props} />
-  ),
-  li: (props) => (
-    <li
-      className="relative my-3 pl-7 before:absolute before:left-1 before:top-3 before:h-1.5 before:w-1.5 before:rounded-full before:bg-rose-100/20"
-      {...props}
-    />
-  ),
-  strong: (props) => <strong className="font-semibold" {...props} />,
-
-  blockquote: (props) => (
-    <blockquote
-      className="my-8 border-l-4 border-rose-200/10 pl-4 italic lg:-mx-12"
-      {...props}
-    />
-  ),
-  del: (props) => <del className="line-through" {...props} />,
 };
