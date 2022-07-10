@@ -20,9 +20,9 @@ const Layouts = ({ children }) => {
     >
       <div
         className={classNames(
-          " h-20 z-1 rounded-3xl md:hidden xl:inline w-40 sm:w-[768px] top-0 absolute bg-gradient-to-r",
-          "from-[#26c317]  to-[#1237bf] blur-[100px]",
-          "dark:bg-gradient-to-r dark:from-[#7e43a5] dark:to-[#0517b9] dark:blur-[100px]"
+          " h-20 z-1 rounded-3xl md:hidden xl:inline opacity-50 w-40 sm:w-[768px] top-0 absolute bg-gradient-to-r",
+          "from-green-500  to-cyan-500 blur-[50px]",
+          "dark:bg-gradient-to-r dark:from-violet-500 dark:to-blue-600"
         )}
       ></div>
       <div className="fixed top-3 sm:top-6 z-30 w-full">
