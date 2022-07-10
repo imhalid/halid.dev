@@ -32,38 +32,29 @@ export default function Document() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <body className="dark:bg-neutral-900 h-screen">
-        {/* <svg
-          className="pointer-events-none fixed isolate z-50 opacity-20 mix-blend-soft-light"
+      <body className="dark:bg-neutral-900 bg-slate-100/50 h-screen">
+        <svg
+          id="texture"
           width="100%"
           height="100%"
+          class="pointer-events-none fixed isolate z-50 opacity-40 mix-blend-soft-light"
         >
-          <filter id="roughpaper" x="0%" y="0%" width="100%" height="100%">
+          <filter id="noise">
             <feTurbulence
               type="fractalNoise"
-              baseFrequency="0.04"
-              result="noise"
-              numOctaves="5"
-            />
-
-            <feDiffuseLighting
-              in="noise"
-              lightingColor="white"
-              surfaceScale="2"
-            >
-              <feDistantLight azimuth="45" elevation="60" />
-            </feDiffuseLighting>
+              baseFrequency=".8"
+              numOctaves="4"
+              stitchTiles="stitch"
+            ></feTurbulence>
+            {/* https://fecolormatrix.com/ */}
+            <feColorMatrix
+              className="hidden dark:visible"
+              type="saturate"
+              values="0"
+            ></feColorMatrix>
           </filter>
-
-          <rect
-            x="0"
-            y="0"
-            width="100%"
-            height="100%"
-            filter="url(#roughpaper)"
-            fill="none"
-          ></rect>
-        </svg> */}
+          <rect width="100%" height="100%" filter="url(#noise)"></rect>
+        </svg>
         <Main />
         <NextScript />
       </body>

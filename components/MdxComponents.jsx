@@ -6,7 +6,7 @@ export const components = {
     <h1
       className={classNames(
         "text-4xl mt-8 text-neutral-800 font-medium",
-        "dark:text-sky-100"
+        "dark:text-neutral-200"
       )}
       {...props}
     />
@@ -15,7 +15,7 @@ export const components = {
     <h2
       className={classNames(
         "text-3xl text-neutral-800 mt-8 font-medium",
-        "dark:text-sky-100"
+        "dark:text-neutral-200"
       )}
       {...props}
     />
@@ -24,7 +24,7 @@ export const components = {
     <h3
       className={classNames(
         "text-2xl text-neutral-800 mt-8 font-medium",
-        "dark:text-sky-100"
+        "dark:text-neutral-200"
       )}
       {...props}
     />
@@ -33,7 +33,7 @@ export const components = {
     <h4
       className={classNames(
         "text-xl text-neutral-800 mt-8 font-medium",
-        "dark:text-sky-100"
+        "dark:text-neutral-200"
       )}
       {...props}
     />
@@ -42,52 +42,97 @@ export const components = {
     <h5
       className={classNames(
         "text-lg text-neutral-800 mt-8 font-medium",
-        "dark:text-sky-100"
+        "dark:text-neutral-200"
       )}
       {...props}
     />
   ),
 
-  p: (props) => (
-    <p
-      className={classNames(
-        "py-4 text-slate-600 leading-7",
-        "dark:text-slate-300"
-      )}
-      {...props}
-    />
-  ),
+  p: (props) => <p className={classNames("py-3 leading-relaxed")} {...props} />,
+
   blockquote: (props) => (
     <blockquote
       className={classNames(
-        "bg-slate-200 dark:bg-neutral-700/25 shadow rounded-lg text-red-700 px-5"
+        "bg-slate-100 dark:bg-neutral-700/25 border dark:border-neutral-700 rounded-lg px-5"
       )}
       {...props}
     />
   ),
 
   hr: (props) => (
-    <hr {...props} className={classNames("my-6 border-t-1 border-rose-500")} />
+    <hr
+      {...props}
+      className={classNames(
+        "my-6 border-t-1 border-blue-500",
+        "dark:border-orange-300"
+      )}
+    />
   ),
-  ul: (props) => <ul className={classNames("mb-6")} {...props} />,
-  ol: (props) => <ol className={classNames("mb-6")} {...props} />,
+  ul: (props) => (
+    <ul
+      className={classNames("mb-6 list-disc list-inside sm:list-outside")}
+      {...props}
+    />
+  ),
+  ol: (props) => (
+    <ol
+      className={classNames("mb-6 list-decimal list-inside sm:list-outside")}
+      {...props}
+    />
+  ),
   li: (props) => (
     <li
-      className={classNames(
-        "relative my-3 pl-5 before:absolute before:left-1 before:top-3 before:h-1.5 before:w-1.5 before:rounded-full before:bg-blue-200"
-      )}
+      className={classNames(" text-slate-600 dark:text-slate-300 ")}
       {...props}
     />
   ),
   strong: (props) => <strong className={classNames("font-bold")} {...props} />,
   del: (props) => (
-    <del className={classNames("border border-red-600")} {...props} />
+    <del
+      className={classNames("border underline border-b-rose-500")}
+      {...props}
+    />
   ),
-  table: (props) => <table className={classNames("")} {...props} />,
-  th: (props) => <th className={classNames("")} {...props} />,
-  td: (props) => <td className={classNames("")} {...props} />,
+  table: (props) => (
+    <table
+      className={classNames(
+        "rounded overflow-hidden w-full text-slate-600 my-4  bg-neutral-100/50",
+        "dark:bg-neutral-700/75 dark:text-slate-300"
+      )}
+      {...props}
+    />
+  ),
   thead: (props) => <thead className={classNames("")} {...props} />,
-  tbody: (props) => <tbody className={classNames("")} {...props} />,
+  tbody: (props) => (
+    <tbody
+      className={classNames(
+        "divide-y divide-neutral-200",
+        "dark:divide-neutral-600"
+      )}
+      {...props}
+    />
+  ),
+  th: (props) => (
+    <th
+      className={classNames(
+        "bg-orange-500 text-white shadow py-1 align-middle text-center",
+        "dark:bg-orange-400"
+      )}
+      {...props}
+    />
+  ),
+  td: (props) => (
+    <td className={classNames("align-middle py-1 text-center")} {...props} />
+  ),
+  tr: (props) => (
+    <tr
+      className={classNames(
+        " divide-x divide-neutral-200",
+        "dark:divide-neutral-600"
+      )}
+      {...props}
+    />
+  ),
   img: (props) => (
     <img className={classNames("rounded-xl", " shadow ")} {...props} />
   ),
@@ -97,7 +142,10 @@ export const components = {
       return (
         <a
           href={href}
-          className={classNames("text-blue-600 after:content-['_↗']")}
+          className={classNames(
+            "text-blue-600 hover:text-blue-700 hover:border-b hover:border-blue-400",
+            "dark:text-blue-400 dark:hover:border-blue-500/50"
+          )}
           target="_blank"
           rel="noopener"
           {...props}

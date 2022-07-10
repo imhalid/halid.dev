@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layouts from "../components/Layouts";
+import classNames from "util/classNames";
 
 const Home = () => {
   return (
@@ -38,18 +39,22 @@ const Home = () => {
 
           <p>
             Outside of programming, I enjoy doing photography and traveling.
-            Some of my photos can be found on
+            Some of my photos can be found on{" "}
             <Link href="https://www.instagram.com/isuraka/">
-              <a className="link">Instagram.</a>
+              <a className="link bg-gradient-to-r text-transparent font-bold bg-clip-text from-violet-500 to-rose-500 text-clip">
+                [Instagram].
+              </a>
             </Link>
           </p>
           <p>
-            Find me on
+            Find me on{" "}
             <Link href="https://github.com/imhalid">
-              <a className="link cursor-ne-resize"> GitHub, </a>
-            </Link>
+              <a className="link font-bold dark:text-slate-300 text-zinc-800">
+                [GitHub],{" "}
+              </a>
+            </Link>{" "}
             <Link href="https://twitter.com/halidislm">
-              <a className="link twit">Twitter.</a>
+              <a className="link text-blue-500 font-bold">[Twitter].</a>
             </Link>
           </p>
           <p>
@@ -58,8 +63,14 @@ const Home = () => {
             improve myself. If you want to teach me or
           </p>
           <Link href="mailto:hi@halid.dev">
-            <a className="relative inline-block bg-gradient-to-r transition-all from-amber-500 to-rose-500 bg-clip-text text-transparent">
-              <span> [Hire Me] &gt;&gt;&gt; </span> hi@halid.dev
+            <a
+              className={classNames(
+                "px-3 py-2 bg-blue-500 inline-block text-white inset-x-6 font-bold my-3",
+                "rounded-lg hover:shadow-md hover:shadow-blue-400/50 ease-in-out hover:translate-x-1 transition-all hover:-rotate-1",
+                "dark:bg-green-600 dark:hover:bg-green-600/90 dark:hover:shadow-green-400/10"
+              )}
+            >
+              <span>[Hire Me] </span>
             </a>
           </Link>
         </article>

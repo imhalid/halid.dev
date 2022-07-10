@@ -1,8 +1,19 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import {
+  defineDocumentType,
+  defineNestedType,
+  makeSource,
+} from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
+
+const Tag = defineNestedType(() => ({
+  name: "Tag",
+  fields: {
+    tag: { type: "string", required: true },
+  },
+}));
 
 const Post = defineDocumentType(() => ({
   name: "Post",
@@ -10,11 +21,17 @@ const Post = defineDocumentType(() => ({
   // Location of Post source files (relative to `contentDirPath`)
   filePathPattern: `posts/*.mdx`,
   fields: {
-    title: {
-      type: "string",
-      required: true,
+    title: { type: "string", required: true },
+    publishedAt: { type: "string", required: true },
+    description: { type: "string", required: true },
+    status: { type: "enum", options: ["draft", "published"], required: true },
+    tags: {
+      type: "list",
+      of: Tag,
     },
   },
+  // Transform the source file into a content layer document
+
   computedFields: {
     slug: {
       type: "string",

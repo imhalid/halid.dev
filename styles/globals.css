@@ -30,3 +30,11 @@ html {
   box-shadow: 0 -7px 11px rgba(33, 33, 33, 0.1) inset,
     0 7px 11px rgba(227, 227, 227, 0.1) inset;
 }
+
+p {
+  @apply text-slate-600 dark:text-slate-300;
+}
+
+blockquote p {
+  @apply text-slate-500;
+}

@@ -13,11 +13,10 @@
 
 div[data-rehype-pretty-code-fragment] {
   overflow: hidden;
-  @apply my-8 rounded-lg bg-black leading-6 shadow lg:-mx-8;
+  @apply my-8 rounded-lg bg-zinc-800 leading-6 shadow lg:-mx-8;
 }
 
 div[data-rehype-pretty-code-fragment] pre {
-  overflow-x: auto;
   color-scheme: dark;
   @apply py-2 text-sm leading-7;
 }
@@ -29,19 +28,21 @@ div[data-rehype-pretty-code-fragment] code {
 /*
      * Code block titles
      */
+
 div[data-rehype-pretty-code-title] {
-  @apply mb-0.5 rounded-md bg-rose-100/10 px-3 py-1 font-mono text-xs text-rose-100/70 shadow-sm;
+  @apply mb-0.5 rounded-tr-md rounded-tl-md bg-slate-700 px-3 py-1 font-mono text-xs text-blue-100/70 shadow-sm;
 }
 
 /*
      * Lines
      */
 div[data-rehype-pretty-code-fragment] .line {
-  @apply border-l-4 border-l-transparent pl-2 pr-3;
+  @apply border-l-4 border-l-transparent pl-2 pr-4;
 }
 
 div[data-rehype-pretty-code-fragment] .line--highlighted {
-  @apply border-l-amber-300/70 bg-rose-200/10;
+  /* box-shadow: 125px 0px 44px -90px rgba(134, 134, 134, 0.354) inset; */
+  @apply border-l-blue-500 bg-stone-100/5;
 }
 
 /*
@@ -54,14 +55,12 @@ code[data-line-numbers] {
 code[data-line-numbers] .line::before {
   counter-increment: line;
   content: counter(line);
-  display: inline-block;
-  text-align: right;
 
-  @apply mr-3 w-4 text-white/20;
+  @apply mr-3 w-4 text-white/20 inline-block text-right;
 }
 
 code[data-line-numbers] .line--highlighted::before {
-  @apply text-white/70;
+  @apply text-slate-300;
 }
 
 /*
@@ -71,7 +70,8 @@ p > code,
 li > code,
 span[data-rehype-pretty-code-fragment],
 div[data-rehype-pretty-code-fragment] .word--highlighted {
-  @apply rounded-full border border-rose-300/10 bg-rose-300/10 px-1.5 py-[1px] font-mono text-[13px];
+  @apply rounded-full border border-blue-300/20 bg-blue-300/20 px-1.5 py-[1px] font-mono text-[13px];
+  @apply dark:bg-blue-900/20 dark:border-blue-700/50;
 }
 
 /*
@@ -81,5 +81,6 @@ div[data-rehype-pretty-code-fragment] .word--highlighted {
 p > code,
 li > code,
 span[data-rehype-pretty-code-fragment] {
-  @apply whitespace-nowrap text-rose-300/90;
+  @apply whitespace-nowrap text-blue-500;
+  @apply dark:text-blue-500;
 }

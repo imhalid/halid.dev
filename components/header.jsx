@@ -40,28 +40,37 @@ const Nav = () => {
     <div
       className={classNames(
         "flex flex-col justify-center py-1 px-3  rounded-xl h-12 text-base ",
-        "backdrop-blur bg-neutral-500/50 border-neutral-500/50 shadow-sm"
+        "backdrop-blur  bg-neutral-50/90 border-neutral-500/10 border shadow-sm",
+        "dark:bg-neutral-800/10"
       )}
     >
-      <ul className="flex justify-center items-center space-x-3 text-white font-medium">
+      <ul className="flex justify-center items-center space-x-3 text-neutral-600 font-medium dark:text-slate-200">
         <li className="flex-1">
           <Link href="/">
-            <a className="hover:text-white/80">Home</a>
+            <a className="hover:text-neutral-600/80 dark:hover:text-neutral-300 transition-all">
+              Home
+            </a>
           </Link>
         </li>
         <li>
           <Link href="/blog">
-            <a className="hover:text-white/80">Blog</a>
+            <a className="hover:text-neutral-600/80 dark:hover:text-neutral-300 transition-all">
+              Blog
+            </a>
           </Link>
         </li>
         <li>
           <Link href="/photos">
-            <a className="hover:text-white/80">Photos</a>
+            <a className="hover:text-neutral-600/80 dark:hover:text-neutral-300 transition-all">
+              Photos
+            </a>
           </Link>
         </li>
         <li>
           <Link href="/snippets">
-            <a className="pr-1 hover:text-white/80">Snippets</a>
+            <a className="pr-1 hover:text-neutral-600/80 dark:hover:text-neutral-300 transition-all">
+              Snippets
+            </a>
           </Link>
         </li>
         <li>{renderThemeChanger()}</li>
