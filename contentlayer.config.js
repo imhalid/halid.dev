@@ -44,7 +44,11 @@ const Post = defineDocumentType(() => ({
 }));
 
 const rehypePrettyCodeOptions = {
-  theme: "one-dark-pro",
+  theme: {
+    light: "github-light",
+    dark: "github-dark",
+    //double display of themes should be fixed
+  },
   tokensMap: {
     // VScode command palette: Inspect Editor Tokens and Scopes
     // https://github.com/Binaryify/OneDark-Pro/blob/47c66a2f2d3e5c85490e1aaad96f5fab3293b091/themes/OneDark-Pro.json
