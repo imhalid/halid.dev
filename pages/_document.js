@@ -37,7 +37,7 @@ export default function Document() {
           id="texture"
           width="100%"
           height="100%"
-          class="pointer-events-none fixed isolate z-50 opacity-40 mix-blend-soft-light"
+          className="pointer-events-none fixed isolate z-50 opacity-40 mix-blend-soft-light"
         >
           <filter id="noise">
             <feTurbulence

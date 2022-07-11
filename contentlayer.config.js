@@ -15,6 +15,16 @@ const Tag = defineNestedType(() => ({
   },
 }));
 
+const computedFields = {
+  slug: {
+    type: "string",
+    resolve: (snips) =>
+      snips._raw.sourceFileName
+        // hello-world.mdx => hello-world
+        .replace(/\.mdx$/, ""),
+  },
+};
+
 const Post = defineDocumentType(() => ({
   name: "Post",
   contentType: "mdx",
@@ -32,15 +42,26 @@ const Post = defineDocumentType(() => ({
   },
   // Transform the source file into a content layer document
 
-  computedFields: {
-    slug: {
-      type: "string",
-      resolve: (post) =>
-        post._raw.sourceFileName
-          // hello-world.mdx => hello-world
-          .replace(/\.mdx$/, ""),
+  computedFields,
+}));
+
+const Snippets = defineDocumentType(() => ({
+  name: "Snippets",
+  contentType: "mdx",
+  // Location of Post source files (relative to `contentDirPath`)
+  filePathPattern: `snippets/*.mdx`,
+  fields: {
+    title: { type: "string", required: true },
+    publishedAt: { type: "string", required: true },
+    description: { type: "string", required: true },
+    status: { type: "enum", options: ["draft", "published"], required: true },
+    tags: {
+      type: "list",
+      of: Tag,
     },
   },
+
+  computedFields,
 }));
 
 const rehypePrettyCodeOptions = {
@@ -73,7 +94,7 @@ const rehypePrettyCodeOptions = {
 const contentLayerConfig = makeSource({
   // Location of source files for all defined documentTypes
   contentDirPath: "data",
-  documentTypes: [Post],
+  documentTypes: [Post, Snippets],
   mdx: {
     esbuildOptions(options) {
       options.target = "esnext";

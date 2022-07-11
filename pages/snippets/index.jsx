@@ -1,18 +1,20 @@
-import { allPosts } from "contentlayer/generated";
+import { allSnippets } from "contentlayer/generated";
 import Link from "next/link";
 import Layouts from "../../components/Layouts";
 import classNames from "../../util/classNames";
 
 export const getStaticProps = () => {
-  return { props: { posts: allPosts } };
+  return { props: { posts: allSnippets } };
 };
 
 export default function PostListPage({ posts }) {
+  console.log(posts);
+
   return (
     <Layouts>
       <div>
         {posts
-          .filter((isPublished) => isPublished.status === "published")
+          .filter((isPublisheds) => isPublisheds.status === "published")
           .map((post) => (
             <div
               className={classNames(
@@ -30,7 +32,7 @@ export default function PostListPage({ posts }) {
                   "dark:text-neutral-200"
                 )}
               >
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`/snippets/${post.slug}`}>
                   <a className="">{post.title}</a>
                 </Link>
               </h2>

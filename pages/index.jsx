@@ -9,7 +9,7 @@ const Home = () => {
     <Layouts>
       <div>
         <Head>
-          <title>Home</title>
+          <title>Halid</title>
         </Head>
 
         <article>
