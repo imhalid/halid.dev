@@ -12,6 +12,8 @@
 - [x] Responsive Design
 - [x] Night Mode
 - [x] Add a 404 page
+- [ ] Create components
+- [ ] Add system theme
 - [ ] Add Seo From Next.js
 - [ ] Blog Template
 - [ ] Snippets Template

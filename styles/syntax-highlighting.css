@@ -5,19 +5,18 @@
  * ```
  */
 
-/* kod blokları ve bazı bölümler burada stillendirlitoyuz.*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 div[data-rehype-pretty-code-fragment] {
   overflow: hidden;
-  @apply my-8 rounded-lg bg-zinc-800 leading-6 shadow lg:-mx-8;
+  @apply my-8 rounded-lg bg-neutral-100/50 leading-6 lg:-mx-8;
+  @apply dark:bg-neutral-900;
 }
 
 div[data-rehype-pretty-code-fragment] pre {
-  color-scheme: dark;
+  overflow-x: auto;
   @apply py-2 text-sm leading-7;
 }
 
@@ -30,7 +29,8 @@ div[data-rehype-pretty-code-fragment] code {
      */
 
 div[data-rehype-pretty-code-title] {
-  @apply mb-0.5 rounded-tr-md rounded-tl-md bg-slate-700 px-3 py-1 font-mono text-xs text-blue-100/70 shadow-sm;
+  @apply mb-0.5 rounded-tr-md rounded-tl-md bg-blue-500 px-3 py-1 font-mono text-xs text-blue-100 shadow-sm;
+  @apply dark:bg-slate-800;
 }
 
 /*
@@ -42,7 +42,8 @@ div[data-rehype-pretty-code-fragment] .line {
 
 div[data-rehype-pretty-code-fragment] .line--highlighted {
   /* box-shadow: 125px 0px 44px -90px rgba(134, 134, 134, 0.354) inset; */
-  @apply border-l-blue-500 bg-stone-100/5;
+  @apply border-l-blue-500 bg-stone-200/50;
+  @apply dark:bg-stone-100/5;
 }
 
 /*
@@ -55,12 +56,13 @@ code[data-line-numbers] {
 code[data-line-numbers] .line::before {
   counter-increment: line;
   content: counter(line);
-
-  @apply mr-3 w-4 text-white/20 inline-block text-right;
+  @apply mr-3 w-4 text-neutral-400 inline-block text-right;
+  @apply dark:text-white/20;
 }
 
 code[data-line-numbers] .line--highlighted::before {
-  @apply text-slate-300;
+  @apply text-neutral-600;
+  @apply dark:text-slate-300;
 }
 
 /*
@@ -83,4 +85,48 @@ li > code,
 span[data-rehype-pretty-code-fragment] {
   @apply whitespace-nowrap text-blue-500;
   @apply dark:text-blue-500;
+}
+
+/*
+Theme change
+*/
+
+html[class="light"]
+  div[data-rehype-pretty-code-fragment]
+  code[data-theme="dark"] {
+  display: none;
+}
+
+html[class="light"]
+  div[data-rehype-pretty-code-fragment]
+  pre[data-theme="dark"] {
+  display: none;
+}
+
+html[class="light"] div[data-theme="dark"] {
+  display: none;
+}
+
+html[class="light"] code[data-theme="dark"] {
+  display: none;
+}
+
+html[class="dark"]
+  div[data-rehype-pretty-code-fragment]
+  code[data-theme="light"] {
+  display: none;
+}
+
+html[class="dark"]
+  div[data-rehype-pretty-code-fragment]
+  pre[data-theme="light"] {
+  display: none;
+}
+
+html[class="dark"] div[data-theme="light"] {
+  display: none;
+}
+
+html[class="dark"] code[data-theme="light"] {
+  display: none;
 }

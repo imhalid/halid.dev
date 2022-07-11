@@ -96,27 +96,19 @@ export const components = {
   table: (props) => (
     <table
       className={classNames(
-        "rounded overflow-hidden w-full text-slate-600 my-4  bg-neutral-100/50",
-        "dark:bg-neutral-700/75 dark:text-slate-300"
+        "rounded overflow-hidden w-full text-slate-600 my-4  bg-neutral-100/10",
+        "dark:bg-neutral-700/20 dark:text-slate-200"
       )}
       {...props}
     />
   ),
   thead: (props) => <thead className={classNames("")} {...props} />,
-  tbody: (props) => (
-    <tbody
-      className={classNames(
-        "divide-y divide-neutral-200",
-        "dark:divide-neutral-600"
-      )}
-      {...props}
-    />
-  ),
+  tbody: (props) => <tbody className={classNames("")} {...props} />,
   th: (props) => (
     <th
       className={classNames(
-        "bg-orange-500 text-white shadow py-1 align-middle text-center",
-        "dark:bg-orange-400"
+        "bg-blue-500 text-white shadow py-1 align-middle text-center",
+        "dark:bg-blue-600/50"
       )}
       {...props}
     />
@@ -127,8 +119,8 @@ export const components = {
   tr: (props) => (
     <tr
       className={classNames(
-        " divide-x divide-neutral-200",
-        "dark:divide-neutral-600"
+        "divide-x divide-white/5  even:bg-blue-200/50",
+        "dark:even:bg-blue-600/20"
       )}
       {...props}
     />

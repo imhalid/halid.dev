@@ -18,7 +18,7 @@ export default function PostListPage({ posts }) {
         {posts.map((post) => (
           <div
             className={classNames(
-              "p-3 my-5 rounded-xl",
+              "p-3 my-5 rounded-xl relative",
               "bg-neutral-100/40 border",
               "dark:bg-neutral-50/5 dark:border-neutral-700"
             )}
@@ -33,9 +33,12 @@ export default function PostListPage({ posts }) {
               )}
             >
               <Link href={`/blog/${post.slug}`}>
-                <a>{post.title}</a>
+                <a className="">{post.title}</a>
               </Link>
             </h2>
+            <p className="text-black/30 absolute bottom-1 right-3 dark:text-white/40 text-sm">
+              {post.publishedAt}
+            </p>
             <p className="pb-3 ">{post.description}</p>
             <p className="">
               {post.tags.map((tags) => (

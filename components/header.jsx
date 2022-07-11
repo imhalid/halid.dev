@@ -44,10 +44,15 @@ const Nav = () => {
         "dark:bg-neutral-800/10"
       )}
     >
-      <ul className="flex justify-center items-center space-x-3 text-neutral-600 font-medium dark:text-slate-200">
+      <ul
+        className={classNames(
+          "flex justify-center items-center  space-x-3 font-medium ",
+          "dark:text-slate-200"
+        )}
+      >
         <li className="flex-1">
           <Link href="/">
-            <a className="hover:text-neutral-600/80 dark:hover:text-neutral-300 transition-all">
+            <a className="hover:text-neutral-600/80  dark:hover:text-neutral-300 transition-all">
               Home
             </a>
           </Link>
@@ -60,9 +65,9 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link href="/photos">
-            <a className="hover:text-neutral-600/80 dark:hover:text-neutral-300 transition-all">
-              Photos
+          <Link href="/utilles">
+            <a className="hover:text-neutral-600/80  dark:hover:text-neutral-300 transition-all">
+              Utilles
             </a>
           </Link>
         </li>
