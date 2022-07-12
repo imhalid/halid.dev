@@ -16,7 +16,7 @@ const ThemeChange = () => {
     if (currentTheme === "dark") {
       return (
         <button
-          className="bg-gradient-to-b from-[#eaeaea] to-[#d6d6d6] text-neutral-900 p-1 rounded"
+          className="bg-neutral-200 text-neutral-900 p-1 rounded"
           onClick={() => setTheme("light")}
         >
           <BiMoon />
@@ -25,7 +25,7 @@ const ThemeChange = () => {
     } else {
       return (
         <button
-          className="bg-gradient-to-b from-[#282828] to-[#1a1a1a] text-neutral-100 p-1 rounded"
+          className="bg-neutral-700 text-neutral-100 p-1 rounded"
           onClick={() => setTheme("dark")}
         >
           <BiSun />

@@ -7,40 +7,42 @@ export const getStaticProps = () => {
   return { props: { posts: allSnippets } };
 };
 
-export default function PostListPage({ posts }) {
-  console.log(posts);
-
+export default function SnippetsListPage({ posts }) {
   return (
     <Layouts>
-      <div>
+      <div className="">
         {posts
           .filter((isPublisheds) => isPublisheds.status === "published")
           .map((post) => (
-            <div
-              className={classNames(
-                "p-3 my-5 rounded-xl relative",
-                "bg-neutral-100/40 border",
-                "dark:bg-neutral-50/5 dark:border-neutral-700"
-              )}
-              key={post.slug}
-            >
-              <h2
+            <Link href={`/snippets/${post.slug}`} key={post.slug}>
+              <div
                 className={classNames(
-                  "pb-2 first-letter:capitalize text-xl font-medium",
-                  "hover:",
-                  "text-neutral-800",
-                  "dark:text-neutral-200"
+                  "p-3 my-5 cursor-pointer snipHover rounded-xl flex justify-between items-center",
+                  "bg-neutral-100/40 border ",
+                  "dark:bg-neutral-50/5 dark:border-neutral-700"
                 )}
               >
-                <Link href={`/snippets/${post.slug}`}>
-                  <a className="">{post.title}</a>
-                </Link>
-              </h2>
-              <p className="text-black/30 absolute bottom-1 right-3 dark:text-white/40 text-sm">
-                {post.publishedAt}
-              </p>
-              <p className="pb-3 ">{post.description}</p>
-              <p className="">
+                <p
+                  className={classNames(
+                    "first-letter:capitalize text-xl font-medium"
+                  )}
+                >
+                  {post.title}
+                </p>
+                <p className="text-black/60 font-medium dark:text-white/40 text-sm">
+                  {post.publishedAt}
+                </p>
+              </div>
+            </Link>
+          ))}
+      </div>
+    </Layouts>
+  );
+}
+
+//List Tags
+{
+  /* <p className="">
                 {post.tags.map((tags) => (
                   <span
                     className={classNames(
@@ -53,10 +55,5 @@ export default function PostListPage({ posts }) {
                     {tags.tag}
                   </span>
                 ))}
-              </p>
-            </div>
-          ))}
-      </div>
-    </Layouts>
-  );
+              </p> */
 }

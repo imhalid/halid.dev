@@ -37,7 +37,9 @@ export default function PostListPage({ posts }) {
               <p className="text-black/30 absolute bottom-1 right-3 dark:text-white/40 text-sm">
                 {post.publishedAt}
               </p>
-              <p className="pb-3 ">{post.description}</p>
+              <p className="pb-3 text-neutral-500 dark:text-neutral-400">
+                {post.description}
+              </p>
               <p className="">
                 {post.tags.map((tags) => (
                   <span

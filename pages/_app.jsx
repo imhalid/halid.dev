@@ -5,7 +5,7 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence initial={false}>
       <ThemeProvider attribute="class">
         <Head></Head>
         <Component {...pageProps} key={router.route} />
