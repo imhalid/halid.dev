@@ -1,12 +1,12 @@
 import Nav from "./header";
 import Footer from "./footer";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import classNames from "../util/classNames";
 
 const variants = {
-  hidden: { opacity: 0, x: 0, y: -20, scale: 1 },
+  hidden: { opacity: 0, x: 0, y: 0, scale: 1 },
   enter: { opacity: 1, x: 0, y: 0, scale: 1 },
-  viewport: { once: true },
+  exit: { opacity: 0, x: 0, y: 0, scale: 1 },
 };
 const Layouts = ({ children }) => {
   return (
@@ -33,26 +33,29 @@ const Layouts = ({ children }) => {
           <Nav />
         </div>
       </div>
+
       <div
         className={classNames(
-          "bg-white w-full backdrop-blur shadow-lg",
-          "dark:bg-neutral-800/80 dark:border-neutral-800/50",
+          "bg-white text-neutral-800 w-full backdrop-blur shadow-lg",
+          "dark:bg-neutral-800/80 dark:text-neutral-200 dark:border-neutral-800/50",
           "sm:rounded-2xl sm:w-full  sm:mx-auto"
         )}
       >
         <div
           className={classNames("relative", "sm:p-12 sm:pb-5", "pt-20 px-3")}
         >
-          <motion.div
-            layout
-            variants={variants} // Pass the variant object into Framer Motion
-            initial="hidden" // Set the initial state to variants.hidden
-            animate="enter" // Animated state to variants.enter
-            viewport="viewport"
-            transition={{ duration: 0.5 }}
+          <motion.main
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ type: "linear" }}
+            style={{
+              height: "auto",
+            }}
           >
             {children}
-          </motion.div>
+          </motion.main>
         </div>
         <Footer />
       </div>

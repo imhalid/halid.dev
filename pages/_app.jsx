@@ -5,12 +5,14 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <AnimatePresence initial={false}>
+    <>
       <ThemeProvider attribute="class">
         <Head></Head>
-        <Component {...pageProps} key={router.route} />
+        <AnimatePresence exitBeforeEnter initial={false}>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </ThemeProvider>
-    </AnimatePresence>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
+import Link from "../util/noScrollLink";
 import { motion } from "framer-motion";
+
 import Layouts from "../components/Layouts";
 import classNames from "util/classNames";
 
@@ -86,3 +87,5 @@ const Home = () => {
 };
 
 export default Home;
+
+//https://codesandbox.io/s/b7runv?file=/App.js&from-sandpack=true
