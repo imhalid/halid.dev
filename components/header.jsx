@@ -31,13 +31,13 @@ const Nav = () => {
             </a>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/utilles">
             <a className="hover:text-neutral-600/80  dark:hover:text-neutral-300 transition-all">
               Utilles
             </a>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/snippets">
             <a className="pr-1 hover:text-neutral-600/80 dark:hover:text-neutral-300 transition-all">
