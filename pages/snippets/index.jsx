@@ -2,6 +2,7 @@ import { allSnippets } from "contentlayer/generated";
 import Link from "next/link";
 import Layouts from "../../components/Layouts";
 import classNames from "../../util/classNames";
+import Head from "next/head";
 
 export const getStaticProps = () => {
   return { props: { posts: allSnippets } };
@@ -10,6 +11,9 @@ export const getStaticProps = () => {
 export default function SnippetsListPage({ posts }) {
   return (
     <Layouts>
+      <Head>
+        <title>Snippets</title>
+      </Head>
       <div className="">
         {posts
           .filter((isPublisheds) => isPublisheds.status === "published")

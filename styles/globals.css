@@ -33,6 +33,14 @@
     transform: rotate3d(1, 0, 0, 0deg);
     opacity: 1;
   }
+
+  .beforeBlue {
+    @apply before:absolute before:rounded-full before:-left-[3.11rem] before:bottom-0 before:shadow-[0px_0px_6px_rgb(36,100,255)] before:top-0 before:w-1 before:h-full before:bg-[rgb(36,100,255)];
+  }
+
+  .titles {
+    @apply text-5xl tracking-tighter relative font-medium first-letter:capitalize;
+  }
 }
 
 * {
@@ -46,6 +54,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Karla", sans-serif;
   overflow-x: clip;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  scroll-padding-top: 100px;
 }
 
 .innerShadow {

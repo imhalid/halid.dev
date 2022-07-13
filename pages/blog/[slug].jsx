@@ -25,7 +25,7 @@ export default function SinglePostPage({ post }) {
   return (
     <Layouts>
       <article className="">
-        {/* <h1>{post.title}</h1> */}
+        <h1 className="titles beforeBlue">{post.title}</h1>
         <MDXContent components={{ ...components }} />
       </article>
     </Layouts>

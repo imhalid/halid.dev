@@ -10,7 +10,7 @@ const Home = () => {
     <Layouts>
       <div>
         <Head>
-          <title>Halid</title>
+          <title>halid.dev</title>
         </Head>
 
         <article>
@@ -42,7 +42,7 @@ const Home = () => {
             Outside of programming, I enjoy doing photography and traveling.
             Some of my photos can be found on{" "}
             <Link href="https://www.instagram.com/isuraka/">
-              <a className="link bg-gradient-to-r text-transparent font-bold bg-clip-text from-violet-500 to-rose-500 text-clip">
+              <a className="cursor-ne-resize bg-gradient-to-r text-transparent font-bold bg-clip-text from-violet-500 to-rose-500 text-clip">
                 [Instagram].
               </a>
             </Link>
@@ -50,12 +50,14 @@ const Home = () => {
           <p>
             Find me on{" "}
             <Link href="https://github.com/imhalid">
-              <a className="link font-bold dark:text-slate-300 text-zinc-800">
+              <a className=" cursor-ne-resize  font-bold dark:text-slate-300 text-zinc-800">
                 [GitHub],{" "}
               </a>
             </Link>{" "}
             <Link href="https://twitter.com/halidislm">
-              <a className="link text-blue-500 font-bold">[Twitter].</a>
+              <a className=" cursor-ne-resize  text-blue-500 font-bold">
+                [Twitter].
+              </a>
             </Link>
           </p>
           <p>
@@ -68,7 +70,7 @@ const Home = () => {
               className={classNames(
                 "px-3 py-2 bg-blue-500 inline-block text-white inset-x-6 font-bold my-3",
                 "rounded-lg hover:shadow-md hover:shadow-blue-400/50 ease-in-out hover:translate-x-1 transition-all hover:-rotate-1",
-                "dark:bg-green-600 dark:hover:bg-green-600/90 dark:hover:shadow-green-400/10"
+                "dark:bg-blue-600 dark:hover:bg-blue-600/90 dark:hover:shadow-blue-400/10"
               )}
             >
               <span>[Hire Me] </span>
