@@ -134,8 +134,8 @@ export const components = {
         <a
           href={href}
           className={classNames(
-            "text-blue-600 hover:text-blue-700 hover:border-b hover:border-blue-400",
-            "dark:text-blue-400 dark:hover:border-blue-500/50"
+            "text-blue-600 hover:text-blue-700  border-b-2 border-opacity-0 hover:border-opacity-100 border-blue-500 transition-all hover:border-blue-500",
+            "dark:text-blue-400 dark:hover:border-blue-500/50 cursor-ne-resize"
           )}
           target="_blank"
           rel="noopener"

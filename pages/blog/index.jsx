@@ -45,8 +45,8 @@ export default function PostListPage({ posts }) {
                   <span
                     className={classNames(
                       "mr-1 px-2 py-1 rounded text-xs font-bold",
-                      "bg-sky-300/50 text-sky-900",
-                      "dark:bg-sky-800/20 dark:text-sky-500"
+                      "bg-blue-300/50 text-blue-900",
+                      "dark:bg-blue-800/20 dark:text-blue-500"
                     )}
                     key={tags.tag}
                   >

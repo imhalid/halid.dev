@@ -37,7 +37,7 @@ const Layouts = ({ children }) => {
       <div
         className={classNames(
           "bg-white text-neutral-800 w-full backdrop-blur shadow-lg",
-          "dark:bg-neutral-800/80 dark:text-neutral-200 dark:border-neutral-800/50",
+          "dark:bg-zinc-800/50 dark:text-neutral-200 dark:border-neutral-800/50",
           "sm:rounded-2xl sm:w-full  sm:mx-auto"
         )}
       >

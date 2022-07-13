@@ -32,7 +32,12 @@ export default function Document() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <body className="dark:bg-neutral-900 bg-slate-100/50 h-screen">
+      <body
+        className="dark:bg-zinc-900 bg-slate-100/50 h-screen
+       selection:bg-blue-100/30 selection:text-blue-500
+       dark:selection:bg-blue-300/10 dark:selection:text-blue-400
+       "
+      >
         <svg
           id="texture"
           width="100%"
