@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -32,6 +33,19 @@ export default function Document() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
+      ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${process.env.GA_TRACKING_ID}');
+        `}
+      </Script>
       <body
         className="dark:bg-zinc-900 bg-slate-100/50 h-screen
        selection:bg-blue-100/30 selection:text-blue-500
