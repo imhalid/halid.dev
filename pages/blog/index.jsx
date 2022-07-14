@@ -2,6 +2,7 @@ import { allPosts } from "contentlayer/generated";
 import Link from "next/link";
 import Layouts from "../../components/Layouts";
 import classNames from "../../util/classNames";
+import Head from "next/head";
 
 export const getStaticProps = () => {
   return { props: { posts: allPosts } };
@@ -10,6 +11,9 @@ export const getStaticProps = () => {
 export default function PostListPage({ posts }) {
   return (
     <Layouts>
+      <Head>
+        <title>Blog</title>
+      </Head>
       <div>
         {posts
           .filter((isPublished) => isPublished.status === "published")

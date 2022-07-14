@@ -10,7 +10,7 @@ const Home = () => {
     <Layouts>
       <div>
         <Head>
-          <title>halid.dev</title>
+          <title>Halid - Front-end Developer</title>
         </Head>
 
         <article>
