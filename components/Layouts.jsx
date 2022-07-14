@@ -42,7 +42,11 @@ const Layouts = ({ children }) => {
         )}
       >
         <div
-          className={classNames("relative", "sm:p-12 sm:pb-5", "pt-20 px-3")}
+          className={classNames(
+            "relative my-4",
+            "sm:p-12 sm:pb-5 sm:my-3",
+            "pt-20 px-3"
+          )}
         >
           <motion.main
             initial="hidden"

@@ -95,31 +95,32 @@ export const components = {
   table: (props) => (
     <table
       className={classNames(
-        "rounded overflow-hidden w-full text-slate-600 my-4  bg-neutral-100/10",
-        "dark:bg-neutral-700/20 dark:text-slate-200"
+        " rounded overflow-hidden w-full text-slate-600 my-4",
+        " dark:text-slate-200"
       )}
       {...props}
     />
   ),
-  thead: (props) => <thead className={classNames("")} {...props} />,
-  tbody: (props) => <tbody className={classNames("")} {...props} />,
   th: (props) => (
     <th
       className={classNames(
-        "bg-blue-500 text-white shadow py-1 align-middle text-center",
+        "bg-blue-500 text-white first:pl-4 shadow py-1 align-middle text-left",
         "dark:bg-blue-600/50"
       )}
       {...props}
     />
   ),
   td: (props) => (
-    <td className={classNames("align-middle py-1 text-center")} {...props} />
+    <td
+      className={classNames("align-middle first:pl-4 py-2 text-left")}
+      {...props}
+    />
   ),
   tr: (props) => (
     <tr
       className={classNames(
-        "divide-x divide-white/5  even:bg-blue-200/50",
-        "dark:even:bg-blue-600/20"
+        "even:bg-neutral-500/5",
+        "dark:even:bg-neutral-500/5"
       )}
       {...props}
     />

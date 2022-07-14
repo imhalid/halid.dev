@@ -15,10 +15,10 @@
 - [x] Create components
 - [x] Blog Template
 - [x] Snippets Template
+- [x] Using icons instead of text in the header (optional)
 
 ---
 
-- [ ] Using icons instead of text in the header (optional)
 - [ ] Add Seo From Next.js
 
 ## Expert Features

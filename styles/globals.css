@@ -39,7 +39,7 @@
   }
 
   .titles {
-    @apply text-5xl tracking-tighter relative font-medium first-letter:capitalize;
+    @apply text-5xl mb-8 tracking-tighter relative font-medium first-letter:capitalize;
   }
 }
 
