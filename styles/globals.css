@@ -39,7 +39,11 @@
   }
 
   .titles {
-    @apply text-5xl mb-8 tracking-tighter relative font-medium first-letter:capitalize;
+    @apply text-2xl font-medium mb-8 tracking-tighter relative  first-letter:capitalize;
+  }
+
+  .pTag {
+    @apply py-3 text-lg leading-normal text-slate-600 dark:text-slate-300;
   }
 }
 

@@ -8,13 +8,14 @@ const Nav = () => {
       className={classNames(
         "py-1 px-3 flex items-center rounded-xl h-12 text-base ",
         "backdrop-blur  bg-neutral-50/90 border-neutral-500/10 border shadow-sm",
-        "dark:bg-neutral-800/10"
+        "dark:bg-neutral-800/30"
       )}
     >
       <Link href="/">
         <a>
           <svg
-            className="w-6 h-6 ml-3 hover:fill-neutral-600/80 dark:fill-slate-400  dark:hover:fill-neutral-300 transition-all"
+            className="w-6 h-6 ml-3 
+             fill-neutral-800 dark:fill-slate-200  hover:scale-110 transition-all"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 495.398 495.398"
           >

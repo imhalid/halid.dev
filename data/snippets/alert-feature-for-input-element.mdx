@@ -1,0 +1,111 @@
+---
+title: "alert feature for input element"
+description: "Desc"
+publishedAt: "2022-07-15"
+status: "published"
+tags:
+  - tag: MDX
+  - tag: Template
+  - tag: Test
+  - tag: Page
+  - tag: CSS
+---
+
+> I will write detailed explanation later.
+
+You can see how it works on [codePen](https://codepen.io/imhalid/pen/vYRyBMB).
+
+```html showLineNumbers title="html code"
+<div class="numberOfPeople">
+  <input type="number" id="people" placeholder="0" value="" min="1" />
+  <div class="texts">
+    <p>Number of People</p>
+    <p class="alert">Can't be zero</p>
+  </div>
+</div>
+```
+
+```css showLineNumbers title="css code"
+:root {
+  --alertRed: hsl(6, 68%, 51%);
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightGrayishCyan);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  opacity: 0;
+}
+
+input {
+  height: 47px;
+  border-radius: 5px;
+  background-color: var(--veryLightGrayishCyan);
+  padding: 0px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 365px;
+  outline: none;
+  text-align: end;
+  color: var(--veryDarkCyan);
+  border: transparent 2px solid;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="number"]:out-of-range {
+  border: red 2px solid;
+}
+
+.numberOfPeople {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.texts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.alert {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+/* if input less 1 => alert opacity 1 */
+input[type="number"]:out-of-range + .texts > .alert {
+  color: var(--alertRed);
+  opacity: 1;
+}
+
+input:focus {
+  border: green 2px solid;
+}
+
+input::placeholder {
+  color: var(--grayishCyan);
+  text-align: end;
+}
+```

@@ -33,7 +33,6 @@ const Layouts = ({ children }) => {
           <Nav />
         </div>
       </div>
-
       <div
         className={classNames(
           "bg-white text-neutral-800 w-full backdrop-blur shadow-lg",
@@ -53,7 +52,7 @@ const Layouts = ({ children }) => {
             animate="enter"
             exit="exit"
             variants={variants}
-            transition={{ type: "linear" }}
+            transition={{ type: "ease", duration: 0.1 }}
             style={{
               height: "auto",
             }}

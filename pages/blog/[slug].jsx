@@ -27,8 +27,12 @@ export default function SinglePostPage({ post }) {
       <Head>
         <title>{post.title}</title>
       </Head>
-      <article className="">
-        <h1 className="titles beforeBlue">{post.title}</h1>
+      <article>
+        <div className="titles beforeBlue">
+          <h1 className="">{post.title}</h1>
+          <p className="text-base opacity-50">{post.publishedAt}</p>
+        </div>
+        <p className="pTag">{post.description}</p>
         <MDXContent components={{ ...components }} />
       </article>
     </Layouts>

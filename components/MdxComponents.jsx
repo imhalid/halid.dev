@@ -47,7 +47,7 @@ export const components = {
     />
   ),
 
-  p: (props) => <p className={classNames("py-3 leading-relaxed")} {...props} />,
+  p: (props) => <p className={classNames("pTag")} {...props} />,
 
   blockquote: (props) => (
     <blockquote
@@ -62,8 +62,8 @@ export const components = {
     <hr
       {...props}
       className={classNames(
-        "my-6 border-t-1 border-blue-500",
-        "dark:border-orange-300"
+        "my-6 border-t-2 border-blue-500/30",
+        "dark:border-blue-400/30"
       )}
     />
   ),
@@ -126,17 +126,25 @@ export const components = {
     />
   ),
   img: (props) => (
-    <img className={classNames("rounded-xl", " shadow ")} {...props} />
+    <img
+      className={classNames(
+        "rounded-xl mx-auto border-[1px] border-neutral-100/30 "
+      )}
+      {...props}
+    />
   ),
 
   a: ({ href = "", ...props }) => {
-    if (href.startsWith("http")) {
+    const result = ["mailto", "http", "https"].some((word) =>
+      href.startsWith(word)
+    );
+    if (result) {
       return (
         <a
           href={href}
           className={classNames(
-            "text-blue-600 hover:text-blue-700  border-b-2 border-opacity-0 hover:border-opacity-100 border-blue-500 transition-all hover:border-blue-500",
-            "dark:text-blue-400 dark:hover:border-blue-500/50 cursor-ne-resize"
+            "text-blue-600  hover:text-blue-100 hover:bg-blue-500 px-[2px] py-[1px] rounded-sm transition-all",
+            "dark:text-blue-400 dark:drop-shadow-[0px_0px_6px_rgb(36,100,255)] dark:hover:text-blue-100 dark:hover:bg-blue-600 cursor-ne-resize"
           )}
           target="_blank"
           rel="noopener"
