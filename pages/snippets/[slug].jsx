@@ -25,7 +25,7 @@ export default function SinglePostPage({ snips }) {
   return (
     <Layouts>
       <Head>
-        <title>{snips.title}</title>
+        <title className="first-letter:capitalize">{snips.title}</title>
       </Head>
       <article className="">
         <div className="titles beforeBlue">

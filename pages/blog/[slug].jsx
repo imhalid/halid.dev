@@ -25,14 +25,14 @@ export default function SinglePostPage({ post }) {
   return (
     <Layouts>
       <Head>
-        <title>{post.title}</title>
+        <title className="first-letter:capitalize">{post.title}</title>
       </Head>
       <article>
         <div className="titles beforeBlue">
           <h1 className="">{post.title}</h1>
           <p className="text-base opacity-50">{post.publishedAt}</p>
         </div>
-        <p className="pTag">{post.description}</p>
+        <p className="pTag italic">{post.description}</p>
         <MDXContent components={{ ...components }} />
       </article>
     </Layouts>
