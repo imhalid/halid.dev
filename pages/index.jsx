@@ -43,20 +43,20 @@ const Home = () => {
             Some of my photos can be found on{" "}
             <Link href="https://www.instagram.com/isuraka/">
               <a className="cursor-ne-resize bg-gradient-to-r text-transparent font-bold bg-clip-text from-violet-500 to-rose-500 text-clip">
-                [Instagram].
+                Instagram.
               </a>
             </Link>
           </p>
           <p>
             Find me on{" "}
             <Link href="https://github.com/imhalid">
-              <a className=" cursor-ne-resize  font-bold dark:text-slate-300 text-zinc-800">
-                [GitHub],{" "}
+              <a className=" cursor-ne-resize  font-bold dark:text-orange-300 text-orange-500">
+                GitHub,{" "}
               </a>
             </Link>{" "}
             <Link href="https://twitter.com/halidislm">
               <a className=" cursor-ne-resize  text-blue-500 font-bold">
-                [Twitter].
+                Twitter.
               </a>
             </Link>
           </p>
@@ -73,7 +73,7 @@ const Home = () => {
                 "dark:bg-blue-600 dark:hover:bg-blue-600/90 dark:hover:shadow-blue-400/10"
               )}
             >
-              <span>[Hire Me] </span>
+              <span>[HIRE ME]</span>
             </a>
           </Link>
         </article>

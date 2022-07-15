@@ -43,8 +43,8 @@ const Layouts = ({ children }) => {
         <div
           className={classNames(
             "relative my-4",
-            "sm:p-12 sm:pb-5 sm:my-3",
-            "pt-20 px-3"
+            "sm:px-12 sm:py-5 sm:pb-1",
+            "pt-12 px-3"
           )}
         >
           <motion.main

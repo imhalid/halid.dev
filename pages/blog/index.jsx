@@ -18,7 +18,7 @@ export default function PostListPage({ posts }) {
         {posts
           .filter((isPublished) => isPublished.status === "published")
           .map((post) => (
-            <Link className="" href={`/blog/${post.slug}`}>
+            <Link className="" key={post.slug} href={`/blog/${post.slug}`}>
               <div
                 className={classNames(
                   "p-3 my-5 rounded-xl cursor-pointer relative hover:scale-[0.98] transition-all",
@@ -44,22 +44,21 @@ export default function PostListPage({ posts }) {
                   {post.description}
                 </p>
                 <p className="">
-                  {/* this needs to be fixed. if there is no tag it shouldn't show anything */}
-                  {post.tags.map((tags) =>
-                    tags.tag == false ? null : (
-                      <span
-                        className={classNames(
-                          "mr-1 px-2 py-1 rounded text-xs font-bold",
-                          "bg-blue-300/50 text-blue-900",
-                          "dark:bg-blue-800/20 dark:text-blue-500"
-                        )}
-                        key={tags.tag}
-                      >
-                        {console.log(tags)}
-                        {tags.tag}
-                      </span>
-                    )
-                  )}
+                  {post.tags === undefined
+                    ? ""
+                    : post.tags.map((tags) => (
+                        <span
+                          className={classNames(
+                            "mr-1 px-2 py-1 rounded text-xs font-bold",
+                            "bg-blue-300/50 text-blue-900",
+                            "dark:bg-blue-800/20 dark:text-blue-500"
+                          )}
+                          key={tags.tag}
+                        >
+                          {/* {console.log(tags)} */}
+                          {tags.tag}
+                        </span>
+                      ))}
                 </p>
               </div>
             </Link>

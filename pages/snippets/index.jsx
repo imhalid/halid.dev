@@ -43,21 +43,3 @@ export default function SnippetsListPage({ posts }) {
     </Layouts>
   );
 }
-
-//List Tags
-{
-  /* <p className="">
-                {post.tags.map((tags) => (
-                  <span
-                    className={classNames(
-                      "mr-1 px-2 py-1 rounded text-xs font-bold",
-                      "bg-sky-300/50 text-sky-900",
-                      "dark:bg-sky-800/20 dark:text-sky-500"
-                    )}
-                    key={tags.tag}
-                  >
-                    {tags.tag}
-                  </span>
-                ))}
-              </p> */
-}
