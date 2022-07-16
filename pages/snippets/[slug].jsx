@@ -25,8 +25,8 @@ export const getStaticProps = async ({ params }) => {
 export default function SinglePostPage({ snips }) {
   const MDXContent = useMDXComponent(snips.body.code);
 
-  const url = `https://halid.dev/blog/${snips.slug}`;
-  const title = `${snips.title} | delba.dev`;
+  const url = `https://halid.dev/snippets/${snips.slug}`;
+  const title = `${snips.title} | halid.dev`;
   const ogImage = createOgImage({
     title: snips.title,
     meta: "halid.dev · " + snips.publishedAt,

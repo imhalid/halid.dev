@@ -1,14 +1,20 @@
 const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  env: {
-    API_URL: process.env.NEXT_PUBLIC_UNSPLASH_key_ID,
+module.exports = withContentlayer({
+  experimental: {
+    images: {
+      allowFutureImage: true,
+      // allow next/image to serve remote images from safelisted domains
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "res.cloudinary.com",
+          pathname: "/halid/**",
+        },
+        { hostname: "api.microlink.io" },
+        { hostname: "pbs.twimg.com" },
+      ],
+    },
   },
-  reactStrictMode: true,
-  images: {
-    domains: ["images.unsplash.com"],
-  },
-};
-
-module.exports = withContentlayer(nextConfig);
+});

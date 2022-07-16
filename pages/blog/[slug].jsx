@@ -2,6 +2,9 @@ import Layouts from "../../components/Layouts";
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { components } from "../../components/MdxComponents";
+import { NextSeo } from "next-seo";
+import { createOgImage } from "../../util/createOgImage";
+
 import Head from "next/head";
 export const getStaticPaths = async () => {
   return await {
@@ -22,19 +25,47 @@ export const getStaticProps = async ({ params }) => {
 
 export default function SinglePostPage({ post }) {
   const MDXContent = useMDXComponent(post.body.code);
+
+  const url = `https://halid.dev/blog/${post.slug}`;
+  const title = `${post.title} | halid.dev`;
+  const ogImage = createOgImage({
+    title: post.title,
+    meta: "halid.dev · " + post.publishedAt,
+  });
+
   return (
-    <Layouts>
-      <Head>
-        <title className="first-letter:capitalize">{post.title}</title>
-      </Head>
-      <article>
-        <div className="titles beforeBlue">
-          <h1 className="">{post.title}</h1>
-          <p className="text-base opacity-50">{post.publishedAt}</p>
-        </div>
-        <p className="pTag italic">{post.description}</p>
-        <MDXContent components={{ ...components }} />
-      </article>
-    </Layouts>
+    <>
+      <NextSeo
+        title={title}
+        description={snips.description}
+        canonical={url}
+        openGraph={{
+          url,
+          title,
+          description: snips.description,
+          images: [
+            {
+              url: ogImage,
+              width: 1600,
+              height: 836,
+              alt: snips.title,
+            },
+          ],
+        }}
+      />
+      <Layouts>
+        <Head>
+          <title className="first-letter:capitalize">{post.title}</title>
+        </Head>
+        <article>
+          <div className="titles beforeBlue">
+            <h1 className="">{post.title}</h1>
+            <p className="text-base opacity-50">{post.publishedAt}</p>
+          </div>
+          <p className="pTag italic">{post.description}</p>
+          <MDXContent components={{ ...components }} />
+        </article>
+      </Layouts>
+    </>
   );
 }
