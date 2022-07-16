@@ -3,6 +3,8 @@ import { allSnippets } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { components } from "../../components/MdxComponents";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
+import { createOgImage } from "../../util/createOgImage";
 export const getStaticPaths = async () => {
   return await {
     paths: allSnippets.map((snips) => ({ params: { slug: snips.slug } })),
@@ -22,18 +24,46 @@ export const getStaticProps = async ({ params }) => {
 
 export default function SinglePostPage({ snips }) {
   const MDXContent = useMDXComponent(snips.body.code);
+
+  const url = `https://halid.dev/blog/${snips.slug}`;
+  const title = `${snips.title} | delba.dev`;
+  const ogImage = createOgImage({
+    title: snips.title,
+    meta: "halid.dev · " + snips.publishedAt,
+  });
+
   return (
-    <Layouts>
-      <Head>
-        <title className="first-letter:capitalize">{snips.title}</title>
-      </Head>
-      <article className="">
-        <div className="titles beforeBlue">
-          <h1 className="">{snips.title}</h1>
-          <p className="text-base opacity-50">{snips.publishedAt}</p>
-        </div>
-        <MDXContent components={{ ...components }} />
-      </article>
-    </Layouts>
+    <>
+      <NextSeo
+        title={title}
+        description={snips.description}
+        canonical={url}
+        openGraph={{
+          url,
+          title,
+          description: snips.description,
+          images: [
+            {
+              url: ogImage,
+              width: 1600,
+              height: 836,
+              alt: snips.title,
+            },
+          ],
+        }}
+      />
+      <Layouts>
+        <Head>
+          <title className="first-letter:capitalize">{snips.title}</title>
+        </Head>
+        <article className="">
+          <div className="titles beforeBlue">
+            <h1 className="">{snips.title}</h1>
+            <p className="text-base opacity-50">{snips.publishedAt}</p>
+          </div>
+          <MDXContent components={{ ...components }} />
+        </article>
+      </Layouts>
+    </>
   );
 }
