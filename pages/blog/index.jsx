@@ -25,7 +25,6 @@ export default function PostListPage({ posts }) {
                   "bg-neutral-100/40 border",
                   "dark:bg-neutral-50/5 dark:border-neutral-700"
                 )}
-                key={post.slug}
               >
                 <h2
                   className={classNames(
@@ -35,7 +34,7 @@ export default function PostListPage({ posts }) {
                     "dark:text-neutral-200"
                   )}
                 >
-                  <a className="">{post.title}</a>
+                  <a>{post.title}</a>
                 </h2>
                 <p className="text-black/30 absolute bottom-1 right-3 dark:text-white/40 text-sm">
                   {post.publishedAt}
