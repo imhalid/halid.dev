@@ -37,18 +37,18 @@ export default function SinglePostPage({ post }) {
     <>
       <NextSeo
         title={title}
-        description={snips.description}
+        description={post.description}
         canonical={url}
         openGraph={{
           url,
           title,
-          description: snips.description,
+          description: post.description,
           images: [
             {
               url: ogImage,
               width: 1600,
               height: 836,
-              alt: snips.title,
+              alt: post.title,
             },
           ],
         }}
