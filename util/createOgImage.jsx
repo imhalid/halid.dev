@@ -22,7 +22,7 @@ export const createOgImage = ({ title, meta }) =>
 
     // PROFILE IMAGE
     // dynamically fetched from my twitter profile
-    `l_twitter_name:imhalid`,
+    `l_twitter_name:halidislm`,
     // Transformations
     `c_thumb,g_face,r_max,w_380,h_380,q_100`,
     // Positioning

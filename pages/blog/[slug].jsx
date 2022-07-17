@@ -32,7 +32,7 @@ export default function SinglePostPage({ post }) {
     title: post.title,
     meta: "halid.dev · " + post.publishedAt,
   });
-
+  console.log(ogImage);
   return (
     <>
       <NextSeo
