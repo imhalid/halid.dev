@@ -1,11 +1,11 @@
 import { createOgImage } from "./createOgImage";
 import { DefaultSeoProps } from "next-seo";
 
-const title = `Halit`;
+const title = `Halid`;
 const description = `Halit is a front-end developer who specializes in building web applications.`;
 const domain = `halit.dev`;
-const twitter = `@imhalid`;
-const meta = `now waiting for job`;
+const twitter = `@halidislm`;
+const meta = `Front-end Developer`;
 
 export const DefaultSeoProps = {
   title: title + " | " + meta,
