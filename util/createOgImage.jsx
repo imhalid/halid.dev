@@ -29,5 +29,5 @@ export const createOgImage = ({ title, meta }) =>
     `fl_layer_apply,w_140,g_north_west,x_100,y_100`,
 
     // BG
-    `ogBgImage.jpg`,
+    `ogBgImages.jpg`,
   ].join("/");
