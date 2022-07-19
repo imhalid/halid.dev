@@ -15,6 +15,7 @@ module.exports = withContentlayer({
         },
         { hostname: "api.microlink.io" },
         { hostname: "pbs.twimg.com" },
+        { hostname: "avatars.githubusercontent.com" },
       ],
     },
   },

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Layouts from "../../components/Layouts";
 import classNames from "../../util/classNames";
 // import { useState, useEffect } from "react";
@@ -26,17 +27,23 @@ const Projects = ({ user, repos }) => {
         <title>Projects</title>
       </Head>
       <Layouts>
-        <img src={user.avatar_url} alt="" />
-        <h1>{user.name}</h1>
-        <p>{user.bio}</p>
-        <p>{user.hireable ? "hireable" : "injob"}</p>
-        <p>{user.created_at} created date</p>
-        <p>{user.followers} followers</p>
-        <p>{user.following} following</p>
-        <p>{user.public_repos} public repos</p>
-        <a href={user.html_url}>link</a>
-        <p>{user.updated_at} updated at</p>
-
+        <div className="text-center">
+          <Image
+            className="rounded-full"
+            src={user.avatar_url}
+            width={100}
+            height={100}
+          />
+          <h1 className="">{user.name}</h1>
+          <p>{user.bio}</p>
+          <p>{user.hireable ? "hireable" : "injob"}</p>
+          <p>{user.created_at} created date</p>
+          <p>{user.followers} followers</p>
+          <p>{user.following} following</p>
+          <p>{user.public_repos} public repos</p>
+          <a href={user.html_url}>link</a>
+          <p>{user.updated_at} updated at</p>
+        </div>
         <hr />
         {repos.map((repo) => (
           <div key={repo.id}>
