@@ -32,6 +32,11 @@ const Nav = () => {
           </Link>
         </li>
         <li>
+          <Link href="/projects">
+            <a className="headerHover">Projects</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/snippets">
             <a className="headerHover mr-6">Snippets</a>
           </Link>

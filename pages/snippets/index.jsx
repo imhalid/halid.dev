@@ -21,7 +21,7 @@ export default function SnippetsListPage({ posts }) {
             <Link href={`/snippets/${post.slug}`} key={post.slug}>
               <div
                 className={classNames(
-                  "p-3 my-5 hover:scale-[0.98] cursor-pointer relative rounded-xl",
+                  "p-3 my-5 hover:scale-[0.98] transition-all cursor-pointer relative rounded-xl",
                   "bg-neutral-100/40 border ",
                   "dark:bg-neutral-50/5 dark:border-neutral-700"
                 )}
