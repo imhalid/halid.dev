@@ -1,5 +1,6 @@
 import NextLink from "next/link";
-import classNames from "../util/classNames";
+import { BlurImage } from "./BlurImage";
+import classNames from "./classNames";
 
 export const components = {
   h1: (props) => (
@@ -126,32 +127,21 @@ export const components = {
       {...props}
     />
   ),
-  img: (props) => (
-    <img
-      className={classNames(
-        "rounded-xl mx-auto border-[1px] border-neutral-100/30 "
-      )}
-      {...props}
-    />
-  ),
+
+  Img: ({ children, ...props }) => {
+    return (
+      <div>
+        <BlurImage {...props} />
+      </div>
+    );
+  },
 
   a: ({ href = "", ...props }) => {
     const result = ["mailto", "http", "https"].some((word) =>
       href.startsWith(word)
     );
     if (result) {
-      return (
-        <a
-          href={href}
-          className={classNames(
-            "text-blue-600  hover:text-blue-100 hover:bg-blue-500 px-[2px] py-[1px] rounded-sm transition-all",
-            "dark:text-blue-400 dark:drop-shadow-[0px_0px_6px_rgb(36,100,255)] dark:hover:text-blue-100 dark:hover:bg-blue-600 cursor-ne-resize"
-          )}
-          target="_blank"
-          rel="noopener"
-          {...props}
-        />
-      );
+      return <a href={href} target="_blank" rel="noopener" {...props} />;
     }
 
     return (

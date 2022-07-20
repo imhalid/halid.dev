@@ -1,7 +1,7 @@
 import Layouts from "../../components/Layouts";
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { components } from "../../components/MdxComponents";
+import { components } from "../../util/MdxComponents";
 import { NextSeo } from "next-seo";
 import { createOgImage } from "../../util/createOgImage";
 
@@ -57,14 +57,14 @@ export default function SinglePostPage({ post }) {
         <Head>
           <title className="first-letter:capitalize">{post.title}</title>
         </Head>
-        <article>
+        <>
           <div className="titles beforeBlue">
             <h1 className="">{post.title}</h1>
             <p className="text-base opacity-50">{post.publishedAt}</p>
           </div>
           <p className="pTag italic">{post.description}</p>
           <MDXContent components={{ ...components }} />
-        </article>
+        </>
       </Layouts>
     </>
   );

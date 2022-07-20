@@ -42,7 +42,7 @@ const Home = () => {
             Outside of programming, I enjoy doing photography and traveling.
             Some of my photos can be found on{" "}
             <Link href="https://www.instagram.com/isuraka/">
-              <a className="cursor-ne-resize bg-gradient-to-r text-transparent font-bold bg-clip-text from-violet-500 to-rose-500 text-clip">
+              <a className="cursor-ne-resize  font-bold text-violet-500  ">
                 Instagram.
               </a>
             </Link>
@@ -50,7 +50,7 @@ const Home = () => {
           <p>
             Find me on{" "}
             <Link href="https://github.com/imhalid">
-              <a className=" cursor-ne-resize  font-bold dark:text-orange-300 text-orange-500">
+              <a className=" cursor-ne-resize  font-bold  text-orange-500">
                 GitHub,{" "}
               </a>
             </Link>{" "}

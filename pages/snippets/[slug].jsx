@@ -1,7 +1,7 @@
 import Layouts from "../../components/Layouts";
 import { allSnippets } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { components } from "../../components/MdxComponents";
+import { components } from "../../util/MdxComponents";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
 import { createOgImage } from "../../util/createOgImage";
