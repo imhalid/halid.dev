@@ -1,15 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
+import { TiStarFullOutline } from "react-icons/ti";
 import Layouts from "../../components/Layouts";
-import classNames from "../../util/classNames";
 import GithubProfileCard from "../../components/githubProfileCard";
 // import { useState, useEffect } from "react";
 import Head from "next/head";
 
 export const getStaticProps = async () => {
+  //https://stackoverflow.com/questions/69423933/how-can-i-pull-the-languages-used-by-github-api-users-and-their-percentages-int
+  const url = "https://api.github.com/users/";
   const [userRes, repoRes] = await Promise.all([
-    fetch("https://api.github.com/users/imhalid"),
-    fetch("https://api.github.com/users/imhalid/repos"),
+    fetch(url + "imhalid"),
+    fetch(url + "imhalid" + "/repos"),
   ]);
   const [user, repos] = await Promise.all([userRes.json(), repoRes.json()]);
   if (userRes.status !== 200 || repoRes.status !== 200) {
@@ -46,15 +47,17 @@ const Projects = ({ user, repos }) => {
                   <h2 className="font-medium">{repo.name}</h2>
                 </a>
               </Link>
-
               <p className="opacity-70">
                 {repo.description || "no description"}{" "}
               </p>
+              <div className="flex items-center space-x-1">
+                <TiStarFullOutline fill="orange" />
+                <span>{repo.stargazers_count}</span>
+              </div>
+
               <p>{repo.language}</p>
               {/* <p>{repo.created_at} created_at</p> */}
               {/* <p>{repo.size} size</p> */}
-
-              <p>{repo.stargazers_count}</p>
             </div>
           ))}
         </div>
