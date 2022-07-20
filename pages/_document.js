@@ -1,31 +1,16 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <link rel="icon" type="image/png" href="/assets/favicon.png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
       </Head>
-
-      <Script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
-      ></Script>
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${process.env.GA_TRACKING_ID}');
-        `}
-      </Script>
       <body
         className="dark:bg-zinc-900 bg-slate-100/50 h-screen
        selection:bg-blue-100/30 selection:text-blue-500

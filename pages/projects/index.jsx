@@ -28,9 +28,8 @@ const Projects = ({ user, repos }) => {
         <title>Projects</title>
       </Head>
       <Layouts>
-        <div className="grid gap-3 grid-cols-3">
+        <div className="columns-3 space-y-5 ">
           <GithubProfileCard
-            className="col-span-2"
             image={user.avatar_url}
             name={user.name}
             username={user.login}
