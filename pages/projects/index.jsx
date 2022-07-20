@@ -40,7 +40,7 @@ const Projects = ({ user, repos }) => {
             repos={user.public_repos}
           />
           {repos.map((repo) => (
-            <div className="repoCard" key={repo.id}>
+            <div className="repoCard break-inside-avoid" key={repo.id}>
               <Link href={repo.html_url}>
                 <a>
                   <h2 className="font-medium">{repo.name}</h2>
