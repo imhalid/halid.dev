@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <ThemeProvider attribute="class">
-        <AnimatePresence exitBeforeEnter initial={false}>
+        <AnimatePresence exitBeforeEnter={true} initial={false}>
           <DefaultSeo {...seo} />
 
           <Component {...pageProps} key={router.route} />

@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { TiStarFullOutline } from "react-icons/ti";
+import { TbGitFork } from "react-icons/tb";
 import Layouts from "../../components/Layouts";
 import GithubProfileCard from "../../components/githubProfileCard";
 // import { useState, useEffect } from "react";
 import Head from "next/head";
 
 export const getStaticProps = async () => {
-  //https://stackoverflow.com/questions/69423933/how-can-i-pull-the-languages-used-by-github-api-users-and-their-percentages-int
   const url = "https://api.github.com/users/";
   const [userRes, repoRes] = await Promise.all([
     fetch(url + "imhalid"),
@@ -20,7 +19,7 @@ export const getStaticProps = async () => {
 };
 
 const Projects = ({ user, repos }) => {
-  console.log(user);
+  // console.log(user);
   console.log(repos);
 
   return (
@@ -43,21 +42,18 @@ const Projects = ({ user, repos }) => {
           {repos.map((repo) => (
             <div className="repoCard break-inside-avoid" key={repo.id}>
               <Link href={repo.html_url}>
-                <a>
-                  <h2 className="font-medium">{repo.name}</h2>
+                <a className="">
+                  <h2 className="font-medium">{repo.name}</h2>{" "}
                 </a>
               </Link>
               <p className="opacity-70">
                 {repo.description || "no description"}{" "}
               </p>
-              <div className="flex items-center space-x-1">
-                <TiStarFullOutline fill="orange" />
-                <span>{repo.stargazers_count}</span>
+              <div className="absolute flex items-center justify-between px-2 left-0 bg-transparent border-t w-full bottom-0 h-7">
+                <p>{repo.fork ? <TbGitFork color="gray" /> : ""}</p>
+                <p className="text-gray-600">{repo.created_at}</p>
+                {/* https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_split1 */}
               </div>
-
-              <p>{repo.language}</p>
-              {/* <p>{repo.created_at} created_at</p> */}
-              {/* <p>{repo.size} size</p> */}
             </div>
           ))}
         </div>
@@ -67,20 +63,3 @@ const Projects = ({ user, repos }) => {
 };
 
 export default Projects;
-
-/*
-
-{repos.map((repo) => (
-          <div key={repo.id}>
-            <hr />
-            <h2>{repo.name} repos name</h2>
-            <p>{repo.description} description</p>
-            <p>{repo.language} language</p>
-            <p>{repo.created_at} created_at</p>
-            <p>{repo.size} size</p>
-            <a href={repo.html_url}>link</a>
-            <p>{repo.stargazers_count}</p>
-          </div>
-        ))}
-
-*/

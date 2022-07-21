@@ -59,7 +59,7 @@
     @apply border-2 p-4 mb-6  row-span-2 relative overflow-hidden border-neutral-400/20 rounded-xl bg-neutral-100/50;
   }
   .repoCard {
-    @apply border-2 p-4  overflow-hidden border-neutral-400/20 rounded-xl bg-neutral-100/50;
+    @apply border-2 p-4 pb-9 relative overflow-hidden border-neutral-400/20 rounded-xl bg-neutral-100/50;
   }
 }
 
