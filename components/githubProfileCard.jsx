@@ -18,7 +18,7 @@ const GithubProfileCard = ({
         className="absolute top-0 -z-20 left-0 right-0 object-cover blur-sm"
         alt=""
       />
-      <div className="bg-neutral-100 w-full top-[70px] shadow-[0px_0px_26px_rgb(0,0,10)] rounded-t-2xl h-full right-0 left-0 absolute -z-10"></div>
+      <div className="bg-[#FCFCFC] dark:bg-neutral-900 w-full top-[70px] shadow-[0px_0px_26px_rgb(0,0,10)] rounded-t-2xl h-full right-0 left-0 absolute -z-10"></div>
       <Image
         className=" rounded-full absolute top-0"
         src={image}
@@ -39,8 +39,8 @@ const GithubProfileCard = ({
         </div>
         <Link href={url}>
           <a>
-            <p className="bg-neutral-200 text-center p-3 mt-4 rounded-lg font-bold">
-              {repos} Public Repos
+            <p className="bg-orange-200 text-orange-900  hover:scale-[1.02] hover:shadow-md hover:shadow-orange-100/30 transition-all text-center p-3 mt-4 rounded-xl">
+              <span className="font-bold">{repos}</span> Public Repos
             </p>
           </a>
         </Link>

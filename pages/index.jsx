@@ -14,7 +14,7 @@ const Home = () => {
         </Head>
 
         <article>
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl mt-8 font-bold">
             Hello{" "}
             <motion.div
               drag

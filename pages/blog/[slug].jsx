@@ -59,7 +59,7 @@ export default function SinglePostPage({ post }) {
         </Head>
         <>
           <div className="titles beforeBlue">
-            <h1 className="">{post.title}</h1>
+            <h1 className="mt-8">{post.title}</h1>
             <p className="text-base opacity-50">{post.publishedAt}</p>
           </div>
           <p className="pTag italic">{post.description}</p>
