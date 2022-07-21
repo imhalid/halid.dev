@@ -15,17 +15,17 @@ const GithubProfileCard = ({
     <div className="profileCard">
       <img
         src={image}
-        className="absolute top-0 -z-20 left-0 right-0 object-cover blur-sm"
+        className="absolute top-0 left-0 right-0 object-cover blur-sm"
         alt=""
       />
-      <div className="bg-[#FCFCFC] dark:bg-neutral-900 w-full top-[70px] shadow-[0px_0px_26px_rgb(0,0,10)] rounded-t-2xl h-full right-0 left-0 absolute -z-10"></div>
+      <div className="bg-[#FCFCFC]  dark:bg-zinc-900 w-full top-[70px] shadow-[0px_0px_26px_rgb(0,0,10)] rounded-t-2xl h-full right-0 left-0 absolute"></div>
       <Image
         className=" rounded-full absolute top-0"
         src={image}
         width={100}
         height={100}
       />
-      <div className="z-10">
+      <div className="z-1 relative">
         <h1 className="font-semibold text-2xl leading-none">{name}</h1>
         <p className="opacity-50 text-sm">{username}</p>
         <p className="font-medium mt-2">{bio}</p>
@@ -39,7 +39,7 @@ const GithubProfileCard = ({
         </div>
         <Link href={url}>
           <a>
-            <p className="bg-orange-200 text-orange-900  hover:scale-[1.02] hover:shadow-md hover:shadow-orange-100/30 transition-all text-center p-3 mt-4 rounded-xl">
+            <p className="bg-blue-200 text-blue-900  hover:scale-[1.02] hover:shadow-md hover:shadow-orange-100/30 transition-all text-center p-3 mt-4 rounded-xl">
               <span className="font-bold">{repos}</span> Public Repos
             </p>
           </a>

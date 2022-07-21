@@ -56,10 +56,10 @@
   }
 
   .profileCard {
-    @apply border-2 p-4 mb-6  row-span-2 relative overflow-hidden border-neutral-400/20 rounded-xl bg-neutral-100/20;
+    @apply border-2 p-4 mb-6  row-span-2 relative overflow-hidden border-neutral-400/20 rounded-xl;
   }
   .repoCard {
-    @apply border p-4 pb-9 relative overflow-hidden dark:border-neutral-700/50 border-neutral-400/20 rounded-xl;
+    @apply border p-4 pb-9 relative dark:border-neutral-700/50 border-neutral-400/20 rounded-xl;
   }
 }
 
