@@ -15,12 +15,12 @@ const GithubProfileCard = ({
     <div className="profileCard">
       <img
         src={image}
-        className="absolute top-0 left-0 right-0 object-cover blur-sm"
+        className="absolute top-0 left-0 right-0 saturate-0 w-full object-cover blur-sm"
         alt=""
       />
       <div className="bg-[#FCFCFC]  dark:bg-zinc-900 w-full top-[70px] shadow-[0px_0px_26px_rgb(0,0,10)] rounded-t-2xl h-full right-0 left-0 absolute"></div>
       <Image
-        className=" rounded-full absolute top-0"
+        className="rounded-full absolute top-0"
         src={image}
         width={100}
         height={100}

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { TbGitFork } from "react-icons/tb";
+import { FaSort } from "react-icons/fa";
 import cx from "clsx";
 import classNames from "../../util/classNames";
 import { AiFillStar } from "react-icons/ai";
 import Layouts from "../../components/Layouts";
 import GithubProfileCard from "../../components/githubProfileCard";
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 import Head from "next/head";
 
 export const getStaticProps = async () => {
@@ -26,16 +27,22 @@ const Projects = ({ user, repos }) => {
   // console.log(repos);
 
   // sorted by updated date
+  const [sort, setSort] = useState(true);
+
   repos.sort((a, b) => {
-    return (
-      parseInt(b.updated_at.split("-")[1]) -
-      parseInt(a.updated_at.split("-")[1])
-    );
+    if (sort) {
+      return (
+        parseInt(b.updated_at.split("-")[1]) -
+        parseInt(a.updated_at.split("-")[1])
+      );
+    } else {
+      return b.stargazers_count - a.stargazers_count;
+    }
   });
 
-  const myTime = "16:59:17";
-  const d = new Date();
-  let hour = d.toLocaleTimeString();
+  // const myTime = "16:59:17";
+  // const d = new Date();
+  // let hour = d.toLocaleTimeString();
   // console.log(parseInt(hour.slice(0, 5)) - parseInt(myTime.slice(0, 5)));
 
   const timeSplit = (x) => {
@@ -63,15 +70,29 @@ const Projects = ({ user, repos }) => {
             url={user.html_url}
             repos={user.public_repos}
           />
+          <div
+            className="text-center cursor-pointer"
+            onClick={() => setSort(!sort)}
+          >
+            <p className=" bg-blue-100 dark:bg-zinc-900/70 border  dark:border-neutral-700/50 border-neutral-400/20 py-2 rounded-md">
+              {sort ? "Sort by star" : "Sort by date"}{" "}
+              <FaSort className="inline" />
+            </p>
+          </div>
           {repos.map((repo, index) => (
             <div
-              className={cx("repoCard break-inside-avoid", {
+              className={cx("repoCard group break-inside-avoid", {
                 "bg-blue-100/40 dark:bg-zinc-700/10": repo.fork,
                 "bg-[#FCFCFC] dark:bg-zinc-900/70": !repo.fork,
               })}
               key={repo.id}
             >
-              <div className="absolute flex items-center font-bold text-sm text-white justify-center bg-orange-500 w-5 h-5 top-3 -left-5">
+              <div
+                className={classNames(
+                  "absolute  flex   items-center font-bold text-sm rounded-tl-[4px] rounded-bl-[4px] text-white justify-center bg-blue-500 w-5 h-5 top-3 -right-5",
+                  "group-hover:right-0 transition-all"
+                )}
+              >
                 {index + 1}
               </div>
               <Link href={repo.html_url}>
