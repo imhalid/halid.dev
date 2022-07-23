@@ -1,0 +1,31 @@
+---
+title: "For More Readable Tailwindcss"
+description: "When using tailwind in projects, everything usually gets mixed up. There is a way to avoid this confusion."
+publishedAt: "2022-07-23"
+status: "published"
+id: "3"
+tags:
+  - tag: tailwindcss
+---
+
+```js showLineNumbers title="classNames.jsx"
+export default function classNames(...args) {
+  return args.filter(Boolean).join(" ");
+}
+```
+
+### How To Use?
+
+```js showLineNumbers title="example.jsx"
+import classNames from "classnames";
+
+<span className={classNames(
+     "mr-1 px-2 py-1 rounded", //margin, padding, border etc.
+     "text-xs font-bold", //font color, font size etc.
+     "bg-blue-300/50 text-blue-900", //background color, text color etc.
+     "dark:bg-blue-800/20 dark:text-blue-500", //dark mode style
+     "hover:bg-blue-500 dark:hover:bg-blue-700", //hover style
+)}>
+```
+
+I can write tailwind more readable as you can see in this example. And I think it's easier to edit that way.

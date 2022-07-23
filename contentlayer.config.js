@@ -34,6 +34,7 @@ const Post = defineDocumentType(() => ({
     title: { type: "string", required: true },
     publishedAt: { type: "string", required: true },
     description: { type: "string", required: true },
+    id: { type: "string", required: true },
     status: { type: "enum", options: ["draft", "published"], required: true },
     tags: {
       type: "list",

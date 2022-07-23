@@ -11,7 +11,7 @@
 
 div[data-rehype-pretty-code-fragment] {
   overflow: hidden;
-  @apply my-8 rounded-lg bg-neutral-100/50 leading-6 lg:-mx-8;
+  @apply mt-8 mb-2 rounded-lg bg-neutral-100/50 leading-6 lg:-mx-8;
   @apply dark:bg-neutral-900;
 }
 
@@ -29,7 +29,7 @@ div[data-rehype-pretty-code-fragment] code {
      */
 
 div[data-rehype-pretty-code-title] {
-  @apply mb-0.5 rounded-tr-md rounded-tl-md bg-blue-500 px-3 py-1 font-mono text-xs text-blue-100 shadow-sm;
+  @apply rounded-tr-md rounded-tl-md bg-blue-500 px-3 py-1 font-mono text-xs text-blue-100 shadow-sm;
   @apply dark:bg-slate-800;
 }
 

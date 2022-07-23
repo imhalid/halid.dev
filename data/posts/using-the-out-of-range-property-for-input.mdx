@@ -1,0 +1,63 @@
+---
+title: "Using The `out-of-range` Property for Input"
+description: "Display of error message as a result of the incorrect value entered in the input."
+publishedAt: "2022-07-16"
+status: "published"
+id: "2"
+tags:
+  - tag: CSS
+  - tag: input
+---
+
+Here is a solution I made for the Type Calculator challenge published by
+Frontend Mentor. In difficulty, we are asked:
+**"Warning when 0 or a smaller number is entered into the input"**
+
+If you want to review the final version of the study and all the codes: [codePen](https://codepen.io/imhalid/pen/vYRyBMB).
+
+<Img src="https://user-images.githubusercontent.com/40598819/180600059-0195037b-5734-4cdb-878b-5fc99a5770a3.png" />
+The desired work from us is to be as in the picture. The title and warning message
+should appear above the input as shown in the picture.
+
+```html showLineNumbers title="html code" {1, 3}
+<div class="numberOfPeople">
+  <input type="number" />
+  <div class="texts">
+    <p>Number of People</p>
+    <p class="alert">Can't be zero</p>
+  </div>
+</div>
+```
+
+If I had the `texts` group above the input in the html code,
+I could not access the `alert` with the CSS selectors. so i reversed groups
+in html code and used `flex-direction: column-reverse`
+for `numbersOfPeople`. so that it will look as I want and I can access `alert`.
+
+```css showLineNumbers title="css code" {3}
+.numberOfPeople {
+  display: flex;
+  flex-direction: column-reverse;
+}
+```
+
+#### How can we show the warning if the value entered in the input is outside the desired number?
+
+We need to use the `min` and `value` property for inputs. And we need to use a CSS selector `:out-of-range`
+
+```html showLineNumbers title="min and value"
+<input type="number" id="people" placeholder="0" value="" min="1" />
+```
+
+- With `min` we determine the minimum value that can be entered for the input.
+- We set the default value with `value`. this is an optional option.
+
+```css showLineNumbers title="if input less 1 => alert opacity 1"
+input[type="number"]:out-of-range + .texts > .alert {
+  color: var(--alertRed);
+  opacity: 1;
+}
+```
+
+The css selector `:out-of-range` provides an arrangement to give us an error message if the
+value entered in the input does not match `min`.

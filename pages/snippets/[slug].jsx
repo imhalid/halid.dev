@@ -58,7 +58,7 @@ export default function SinglePostPage({ snips }) {
         </Head>
         <article className="">
           <div className="titles beforeBlue">
-            <h1 className="">{snips.title}</h1>
+            <h1 className="mt-8">{snips.title}</h1>
             <p className="text-base opacity-50">{snips.publishedAt}</p>
           </div>
           <MDXContent components={{ ...components }} />

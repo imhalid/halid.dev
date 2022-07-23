@@ -71,22 +71,19 @@ export const components = {
   ),
   ul: (props) => (
     <ul
-      className={classNames("mb-6 list-disc list-inside sm:list-outside")}
+      className={classNames(
+        "mb-6 text-rose-500 dark:text-rose-200 list-disc list-inside sm:list-outside"
+      )}
       {...props}
     />
   ),
   ol: (props) => (
     <ol
-      className={classNames("mb-6 list-decimal list-inside sm:list-outside")}
+      className={classNames("mb-6  list-decimal list-inside sm:list-outside")}
       {...props}
     />
   ),
-  li: (props) => (
-    <li
-      className={classNames(" text-slate-600 dark:text-slate-300 ")}
-      {...props}
-    />
-  ),
+  li: (props) => <li className={classNames("list-disc  ")} {...props} />,
   strong: (props) => <strong className={classNames("font-bold")} {...props} />,
   del: (props) => (
     <del
@@ -130,7 +127,7 @@ export const components = {
 
   Img: ({ children, ...props }) => {
     return (
-      <div>
+      <div className="align-middle">
         <BlurImage {...props} />
       </div>
     );

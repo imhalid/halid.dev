@@ -24,7 +24,7 @@ const Nav = () => {
           </svg>
         </a>
       </Link>
-      <ul className={classNames("inline-flex font-bold ml-auto")}>
+      <ul className={classNames("inline-flex list-none font-bold ml-auto")}>
         <li></li>
         <li>
           <Link href="/blog">

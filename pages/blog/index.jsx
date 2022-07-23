@@ -3,12 +3,17 @@ import Link from "next/link";
 import Layouts from "../../components/Layouts";
 import classNames from "../../util/classNames";
 import Head from "next/head";
+import { postcss } from "autoprefixer";
 
 export const getStaticProps = () => {
   return { props: { posts: allPosts } };
 };
 
 export default function PostListPage({ posts }) {
+  console.log(posts);
+  posts.sort((a, b) => {
+    return parseInt(b.id) - parseInt(a.id);
+  });
   return (
     <Layouts>
       <Head>
