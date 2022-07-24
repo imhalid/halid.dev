@@ -58,7 +58,7 @@ export default function SinglePostPage({ post }) {
           <title className="first-letter:capitalize">{post.title}</title>
         </Head>
         <>
-          <div className="titles beforeBlue">
+          <div className="titles">
             <h1 className="mt-8">{post.title}</h1>
             <p className="text-base opacity-50">{post.publishedAt}</p>
           </div>

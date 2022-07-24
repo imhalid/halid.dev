@@ -16,17 +16,26 @@ const footer = () => {
     <>
       <div
         className={classNames(
-          "flex justify-between border-t py-4 text-xs text-slate-600",
-          "dark:text-neutral-300 dark:border-neutral-700"
+          "py-4 pl-3 text-xs text-slate-600",
+          "sm:pl-12",
+          "",
+          "dark:text-neutral-300"
         )}
       >
-        <div className={classNames("sm:pl-8", "pl-5")}>
-          <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">
-            <a className="link">CC BY-NC-SA 4.0</a>
+        <div className="">
+          Build with{" "}
+          <Link href="https://nextjs.org/">
+            <a className="link">Next.Js,</a>
           </Link>{" "}
-          2022-PRESENT © Halid Icli
+          <Link href="https://tailwindcss.com/">
+            <a className="link">Tailwind CSS</a>
+          </Link>{" "}
+          and{" "}
+          <Link href="https://tailwindcss.com/">
+            <a className="link">Vercel</a>
+          </Link>{" "}
         </div>
-        <div className={classNames("sm:pr-8", "pr-5")}>
+        <div className="font-bold">
           Locale: {min} {fullTime}
         </div>
       </div>

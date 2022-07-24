@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "../util/noScrollLink";
+import Projects from "../components/Projects";
 import { motion } from "framer-motion";
 
 import Layouts from "../components/Layouts";
@@ -14,24 +15,7 @@ const Home = () => {
         </Head>
 
         <article>
-          <h1 className="text-3xl mt-8 font-bold">
-            Hello{" "}
-            <motion.div
-              drag
-              dragConstraints={{
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-              }}
-              style={{
-                display: "inline-block",
-                cursor: "grab",
-              }}
-            >
-              ツ
-            </motion.div>
-          </h1>
+          <h1 className="text-3xl mt-8 font-bold">Hello ツ</h1>
           <p>
             Developer and designer making products that feel 'right' and faster.
             Focused on creating fluid and accessible interfaces. Interested in
@@ -42,7 +26,7 @@ const Home = () => {
             Outside of programming, I enjoy doing photography and traveling.
             Some of my photos can be found on{" "}
             <Link href="https://www.instagram.com/isuraka/">
-              <a className="cursor-ne-resize  font-bold text-violet-500  ">
+              <a className="cursor-ne-resize  font-bold text-black  ">
                 Instagram.
               </a>
             </Link>
@@ -50,12 +34,12 @@ const Home = () => {
           <p>
             Find me on{" "}
             <Link href="https://github.com/imhalid">
-              <a className=" cursor-ne-resize  font-bold  text-orange-500">
+              <a className=" cursor-ne-resize  font-bold text-black ">
                 GitHub,{" "}
               </a>
             </Link>{" "}
             <Link href="https://twitter.com/halidislm">
-              <a className=" cursor-ne-resize  text-blue-500 font-bold">
+              <a className=" cursor-ne-resize text-black  font-bold">
                 Twitter.
               </a>
             </Link>
@@ -78,6 +62,7 @@ const Home = () => {
           </Link>
         </article>
       </div>
+      <Projects />
       <style jsx>{`
         p {
           margin-top: 20px;

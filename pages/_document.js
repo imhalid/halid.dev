@@ -12,7 +12,7 @@ export default function Document() {
         />
       </Head>
       <body
-        className="dark:bg-zinc-900 bg-slate-100/50 h-screen
+        className="dark:bg-zinc-900 bg-white h-screen
        selection:bg-blue-100/30 selection:text-blue-500
        dark:selection:bg-blue-300/10 dark:selection:text-blue-400
        "

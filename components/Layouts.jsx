@@ -18,9 +18,7 @@ const Layouts = ({ children }) => {
     >
       <div
         className={classNames(
-          " h-20 z-1 rounded-3xl md:hidden xl:inline opacity-50 w-40 sm:w-[768px] top-0 absolute bg-gradient-to-r",
-          "from-green-500  to-cyan-500 blur-[50px]",
-          "dark:bg-gradient-to-r dark:from-violet-500 dark:to-blue-600"
+          " h-20 z-1 rounded-3xl md:hidden xl:inline opacity-50 w-40 sm:w-[768px] top-0 absolute bg-gradient-to-r"
         )}
       ></div>
       <div className="fixed top-3 sm:top-6 z-30 w-full">
@@ -35,8 +33,7 @@ const Layouts = ({ children }) => {
       </div>
       <div
         className={classNames(
-          "bg-white  w-full backdrop-blur shadow-lg",
-          "dark:bg-zinc-800/50  dark:border-neutral-800/50",
+          " w-full ",
           "sm:rounded-2xl sm:w-full  sm:mx-auto"
         )}
       >

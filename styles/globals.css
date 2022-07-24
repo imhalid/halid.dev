@@ -38,7 +38,7 @@
   }
 
   .titles {
-    @apply text-2xl font-medium mb-8 tracking-tighter relative  first-letter:capitalize;
+    @apply text-4xl font-medium mb-8 tracking-tighter relative  first-letter:capitalize;
   }
 
   .pTag {

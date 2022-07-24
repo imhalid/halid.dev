@@ -11,8 +11,8 @@
 
 div[data-rehype-pretty-code-fragment] {
   overflow: hidden;
-  @apply mt-8 mb-2 rounded-lg bg-neutral-100/50 leading-6 lg:-mx-8;
-  @apply dark:bg-neutral-900;
+  @apply mt-8 mb-2 rounded-lg bg-white/70 leading-6 lg:-mx-8;
+  @apply dark:bg-black/40;
 }
 
 div[data-rehype-pretty-code-fragment] pre {
@@ -42,8 +42,8 @@ div[data-rehype-pretty-code-fragment] .line {
 
 div[data-rehype-pretty-code-fragment] .line--highlighted {
   /* box-shadow: 125px 0px 44px -90px rgba(134, 134, 134, 0.354) inset; */
-  @apply border-l-blue-500 bg-stone-200/50;
-  @apply dark:bg-stone-100/5;
+  @apply border-l-blue-500 bg-blue-200/20;
+  @apply dark:bg-blue-100/5;
 }
 
 /*

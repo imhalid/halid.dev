@@ -57,7 +57,7 @@ export default function SinglePostPage({ snips }) {
           <title className="first-letter:capitalize">{snips.title}</title>
         </Head>
         <article className="">
-          <div className="titles beforeBlue">
+          <div className="titles">
             <h1 className="mt-8">{snips.title}</h1>
             <p className="text-base opacity-50">{snips.publishedAt}</p>
           </div>
