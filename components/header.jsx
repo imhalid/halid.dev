@@ -7,7 +7,7 @@ const Nav = () => {
     <div
       className={classNames(
         "py-1 px-3 flex items-center rounded-xl h-12 text-base ",
-        "backdrop-blur-3xl bg-white/90  border-neutral-500/10 border",
+        "backdrop-blur-md bg-white/30  border-neutral-500/10 border",
         "dark:bg-neutral-800/30"
       )}
     >
