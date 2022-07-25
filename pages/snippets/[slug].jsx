@@ -61,6 +61,7 @@ export default function SinglePostPage({ snips }) {
             <h1 className="mt-8">{snips.title}</h1>
             <p className="text-base opacity-50">{snips.publishedAt}</p>
           </div>
+          <p className="pTag">{snips.description}</p>
           <MDXContent components={{ ...components }} />
         </article>
       </Layouts>
