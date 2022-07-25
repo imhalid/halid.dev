@@ -40,7 +40,7 @@ const Projects = () => {
                       <a
                         className={classNames(
                           " inline shadow bg-white rounded-2xl overflow-hidden p-3",
-                          "hover:bg-neutral-200 transition-all"
+                          "hover:bg-neutral-100 transition-all"
                         )}
                       >
                         <HiOutlineExternalLink size={19} color="black" />
@@ -49,7 +49,14 @@ const Projects = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-lg font-bold mb-2">{project.name}</p>
+                  <Link href={project.live}>
+                    <a>
+                      <p className="text-lg hover:ml-1  transition-all font-bold mb-2">
+                        {project.name}
+                      </p>
+                    </a>
+                  </Link>
+
                   <p className="text-neutral-600 dark:text-white/80">
                     {project.description}
                   </p>

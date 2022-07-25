@@ -12,7 +12,7 @@ export default function Document() {
         />
       </Head>
       <body
-        className="dark:bg-zinc-900 bg-white h-screen
+        className="dark:bg-neutral-900 bg-neutral-100 h-screen
        selection:bg-blue-100/30 selection:text-blue-500
        dark:selection:bg-blue-300/10 dark:selection:text-blue-400
        "
@@ -26,11 +26,11 @@ export default function Document() {
           <filter id="noise">
             <feTurbulence
               type="fractalNoise"
-              baseFrequency=".8"
-              numOctaves="4"
+              baseFrequency="1"
+              numOctaves="10"
               stitchTiles="stitch"
             ></feTurbulence>
-            {/* https://fecolormatrix.com/ */}
+            //https://fecolormatrix.com/
             <feColorMatrix
               className="hidden dark:visible"
               type="saturate"

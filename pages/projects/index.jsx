@@ -54,6 +54,10 @@ const Projects = ({ user, repos }) => {
     return splitTime[0];
   };
 
+  if (!user || !repos) {
+    return <div className="flex justify-center items-center">Loading...</div>;
+  }
+
   return (
     <div>
       <Head>
@@ -71,6 +75,7 @@ const Projects = ({ user, repos }) => {
             url={user.html_url}
             repos={user.public_repos}
           />
+
           <div
             className="text-center cursor-pointer"
             onClick={() => setSort(!sort)}

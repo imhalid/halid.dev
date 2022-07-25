@@ -11,6 +11,15 @@ const projects = [
   },
   {
     id: 2,
+    name: "Hotel Landing Page",
+    description: "One of the first studies I did to test myself. PSD to HTML.",
+    image: "/projects/hotel.png",
+    link: "https://github.com/imhalid/hotel-landing-page",
+    live: "https://hotel-landing-page-ivory.vercel.app/",
+    tags: ["React.js", "Html", "CSS"],
+  },
+  {
+    id: 3,
     name: "Unit Converter",
     description:
       "Project assignment given in javascript course prepared by Scrimba",
@@ -20,7 +29,7 @@ const projects = [
     tags: ["Javascript", "CSS", "tag3"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Tip Calculator",
     description: "An application that will facilitate your tip calculations",
     image: "/projects/tip.png",
@@ -29,7 +38,7 @@ const projects = [
     tags: ["Jacascript", "CSS"],
   },
   {
-    id: 4,
+    id: 5,
     name: "Advice Generator",
     description:
       "An application that displays data from the API on the screen.",
@@ -39,7 +48,7 @@ const projects = [
     tags: ["Jacascript", "CSS", "API"],
   },
   {
-    id: 5,
+    id: 6,
     name: "Expenses Chart Component",
     description:
       "The project I developed with React.js converts the data from json into graphics.",
@@ -47,15 +56,6 @@ const projects = [
     link: "https://github.com/imhalid/expenses-chart-component-main",
     live: "http://expenses-chart-component-main-henna.vercel.app/",
     tags: ["React.js", "Json", "CSS"],
-  },
-  {
-    id: 6,
-    name: "Hotel Landing Page",
-    description: "One of the first studies I did to test myself. PSD to HTML.",
-    image: "/projects/hotel.png",
-    link: "https://github.com/imhalid/hotel-landing-page",
-    live: "https://hotel-landing-page-ivory.vercel.app/",
-    tags: ["React.js", "Html", "CSS"],
   },
   {
     id: 7,
