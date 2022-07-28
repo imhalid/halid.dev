@@ -1,25 +1,5 @@
-# TODO
+![Untitled-1](https://user-images.githubusercontent.com/40598819/181414079-d8923f09-9cca-4b4f-a6d9-dbfb73670dcd.png)
 
-- [x] Header
-- [x] Footer
-- [x] Photos Page
-- [x] Home Page
-- [x] Page Transitions
-- [x] Text Effects
-- [x] Fav Icon
-- [x] Photos For BlurHash
-- [x] Hover Effects
-- [x] Responsive Design
-- [x] Night Mode
-- [x] Add a 404 page
-- [x] Create components
-- [x] Blog Template
-- [x] Snippets Template
-- [x] Using icons instead of text in the header (optional)
-
----
-
-- [ ] Add Seo From Next.js
 
 ## Expert Features
 
