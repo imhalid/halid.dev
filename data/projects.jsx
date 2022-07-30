@@ -35,7 +35,7 @@ const projects = [
     image: "/projects/tip.png",
     link: "https://github.com/imhalid/tip-calculator",
     live: "http://tip-calculator-eta-six.vercel.app/",
-    tags: ["Jacascript", "CSS"],
+    tags: ["Javascript", "CSS"],
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const projects = [
     image: "/projects/advice.png",
     link: "https://github.com/imhalid/advice-generator",
     live: "http://advice-generator-imhalid.vercel.app/",
-    tags: ["Jacascript", "CSS", "API"],
+    tags: ["Javascript", "CSS", "API"],
   },
   {
     id: 6,
