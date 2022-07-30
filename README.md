@@ -1,28 +1,3 @@
-# TODO
+![Untitled-1](https://user-images.githubusercontent.com/40598819/181414520-2e664770-f0f5-4ea2-8ab9-d65f319bcf22.png)
 
-- [x] Header
-- [x] Footer
-- [x] Photos Page
-- [x] Home Page
-- [x] Page Transitions
-- [x] Text Effects
-- [x] Fav Icon
-- [x] Photos For BlurHash
-- [x] Hover Effects
-- [x] Responsive Design
-- [x] Night Mode
-- [x] Add a 404 page
-- [x] Create components
-- [x] Blog Template
-- [x] Snippets Template
-- [x] Using icons instead of text in the header (optional)
-
----
-
-- [ ] Add Seo From Next.js
-
-## Expert Features
-
-- [ ] Strapi CMS
-- [ ] Connect With Firebase
-- [ ] Image for use BlurHash
+[halid.dev](https://halid.dev)
