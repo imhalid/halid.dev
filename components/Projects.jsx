@@ -1,4 +1,4 @@
-import projects from "../data/projects.jsx";
+import projects from "../util/projects.jsx";
 import Image from "next/image.js";
 import classNames from "../util/classNames.jsx";
 import Link from "next/link";

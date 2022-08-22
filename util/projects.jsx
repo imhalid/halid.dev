@@ -1,5 +1,15 @@
 const projects = [
   {
+    id: 8,
+    name: "CV Builder",
+    description:
+      "Beautifully designed cv builder where you can see the changes at the same time",
+    image: "/projects/cvbuilder.png",
+    link: "https://github.com/imhalid/cv-builder",
+    live: "cv-builder.halid.dev",
+    tags: ["TailwindCSS", "JSON", "Next.js"],
+  },
+  {
     id: 1,
     name: "halid.dev",
     description:
@@ -9,6 +19,7 @@ const projects = [
     live: "/",
     tags: ["TailwindCSS", "MDX", "Next.js"],
   },
+
   {
     id: 2,
     name: "Hotel Landing Page",
@@ -26,7 +37,7 @@ const projects = [
     image: "/projects/unit.png",
     link: "https://github.com/imhalid/scrimba-calculator-challenge",
     live: "https://imhalid.github.io/scrimba-calculator-challenge/",
-    tags: ["Javascript", "CSS", "tag3"],
+    tags: ["Javascript", "CSS"],
   },
   {
     id: 4,

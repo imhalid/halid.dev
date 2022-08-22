@@ -88,7 +88,7 @@ const Projects = ({ user, repos }) => {
           {repos.map((repo, index) => (
             <div
               className={cx("repoCard group break-inside-avoid", {
-                "bg-blue-100/40 dark:bg-zinc-700/10": repo.fork,
+                "bg-blue-100/30 dark:bg-zinc-400/10": repo.fork,
                 "bg-[#FCFCFC] dark:bg-zinc-900/70": !repo.fork,
               })}
               key={repo.id}

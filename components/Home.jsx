@@ -1,17 +1,39 @@
 import Link from "../util/noScrollLink";
 import classNames from "util/classNames";
-import Image from "next/image";
 
 const Home = () => {
   return (
     <div className="mt-10">
       <div className="flex items-center ">
-        <div className="bg-gradient-to-tr -rotate-3 transition-all hover:rotate-0 to-neutral-300 from-neutral-300 p-1 rounded-xl">
-          <img
-            src="https://res.cloudinary.com/halid/image/upload/c_scale,q_100,w_411/v1658781219/IMG_9215_nsrvp5.jpg"
-            className="rounded-xl w-16 h-16"
+        <svg
+          width="58"
+          height="64"
+          viewBox="0 0 58 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="drop-shadow-md brightness-125 "
+        >
+          <path
+            d="M33.75 2.31976L52.3288 13.0463C55.2682 14.7433 57.0788 17.8795 57.0788 21.2735V42.7265C57.0788 46.1205 55.2682 49.2567 52.3288 50.9537L33.75 61.6802C30.8107 63.3773 27.1893 63.3773 24.25 61.6802L5.67116 50.9537C2.73185 49.2567 0.921162 46.1205 0.921162 42.7265V21.2735C0.921162 17.8795 2.73185 14.7433 5.67116 13.0463L24.25 2.31976C27.1893 0.622752 30.8107 0.622753 33.75 2.31976Z"
+            fill="url(#paint0_radial_367_2)"
+            stroke="white"
+            strokeWidth="2"
           />
-        </div>
+          <defs>
+            <radialGradient
+              id="paint0_radial_367_2"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(38.5 59.5) rotate(-114.114) scale(57.5196 84.2474)"
+            >
+              <stop stop-color="#002D85" />
+              <stop offset="1" stop-color="#5AC9D8" />
+            </radialGradient>
+          </defs>
+        </svg>
+
         <div className="flex pl-3 flex-col">
           <h1 className="text-3xl  font-bold">Halid</h1>
           <h4 className="opacity-50">Front-end Developer</h4>
