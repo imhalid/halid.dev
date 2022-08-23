@@ -9,9 +9,9 @@ const Projects = () => {
     <div className="mt-6 pt-6 dark:border-white/30  border-t">
       <h1 className="titles">Projects</h1>
       <div className="grid center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-10">
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           return (
-            <div key={project.id}>
+            <div key={index}>
               <div className="">
                 <div className="relative saturate-50 hover:drop-shadow  transition-all hover:saturate-100  group ">
                   <Image
@@ -61,7 +61,7 @@ const Projects = () => {
                     {project.description}
                   </p>
                   <div className="flex">
-                    {project.tags.map((tag) => {
+                    {project.tags.map((tag, index) => {
                       return (
                         <p
                           className={classNames(
@@ -69,7 +69,7 @@ const Projects = () => {
                             "bg-blue-300/50 text-blue-900",
                             "dark:bg-blue-800/20 dark:text-blue-500"
                           )}
-                          key={tag}
+                          key={index}
                         >
                           {tag}
                         </p>
