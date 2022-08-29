@@ -6,7 +6,7 @@ const projects = [
       "Beautifully designed cv builder where you can see the changes at the same time",
     image: "/projects/cvbuilder.png",
     link: "https://github.com/imhalid/cv-builder",
-    live: "cv-builder.halid.dev",
+    live: "https://cv-builder.halid.dev",
     tags: ["TailwindCSS", "JSON", "Next.js"],
   },
   {
