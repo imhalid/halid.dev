@@ -17,6 +17,7 @@ export default function SnippetsListPage({ posts }) {
       <div>
         {posts
           .filter((isPublisheds) => isPublisheds.status === "published")
+          .sort((a, b) => b.id - a.id)
           .map((post) => (
             <Link href={`/snippets/${post.slug}`} key={post.slug}>
               <div
