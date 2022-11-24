@@ -67,7 +67,7 @@ const Home = () => {
           Javascript, dealing with designs. Looking for a job where I can
           improve myself. If you want to teach me or
         </p>
-        <Link href="mailto:hi@halid.dev">
+        <Link href="mailto:imhalid@icloud.com">
           <a
             className={classNames(
               "px-3 py-2 bg-blue-500 inline-block text-white inset-x-6 font-bold my-3",
