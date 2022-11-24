@@ -1,6 +1,6 @@
 import Nav from "./header";
 import Footer from "./footer";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import classNames from "../util/classNames";
 
 const variants = {
