@@ -6,7 +6,7 @@ import Head from "next/head";
 import { NextSeo } from "next-seo";
 import { createOgImage } from "../../util/createOgImage";
 export const getStaticPaths = async () => {
-  return await {
+  return {
     paths: allSnippets.map((snips) => ({ params: { slug: snips.slug } })),
     fallback: false,
   };

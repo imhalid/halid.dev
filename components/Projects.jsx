@@ -1,5 +1,5 @@
 import projects from "../util/projects.jsx";
-import Image from "next/image.js";
+import Image from "next/image";
 import classNames from "../util/classNames.jsx";
 import Link from "next/link";
 import { HiOutlineExternalLink, HiCode } from "react-icons/hi";

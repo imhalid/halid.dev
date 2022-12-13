@@ -7,7 +7,7 @@ import { createOgImage } from "../../util/createOgImage";
 
 import Head from "next/head";
 export const getStaticPaths = async () => {
-  return await {
+  return {
     paths: allPosts.map((post) => ({ params: { slug: post.slug } })),
     fallback: false,
   };
