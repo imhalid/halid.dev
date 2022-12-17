@@ -31,6 +31,7 @@ const Projects = ({ user, repos }) => {
   const [sort, setSort] = useState(true);
 
   repos.sort((a, b) => {
+
     if (sort) {
       return (
         parseInt(b.updated_at.split("-")[1]) -

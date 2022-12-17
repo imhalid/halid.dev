@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import classNames from "../util/classNames";
 
 const variants = {
-  hidden: { opacity: 0, x: 0, y: 0, scale: 1 },
+  hidden: { opacity: 0, x: 0, y: 50, scale: 1 },
   enter: { opacity: 1, x: 0, y: 0, scale: 1 },
-  exit: { opacity: 0, x: 0, y: 0, scale: 1 },
+  exit: { opacity: 0, x: 0, y: 50, scale: 1 },
 };
 const Layouts = ({ children }) => {
   return (
