@@ -1,5 +1,5 @@
 // double escape for commas and slashes
-const e = (str) => encodeURIComponent(encodeURIComponent(str));
+const e = str => encodeURIComponent(encodeURIComponent(str))
 
 export const createOgImage = ({ title, meta }) =>
   [
@@ -30,4 +30,4 @@ export const createOgImage = ({ title, meta }) =>
 
     // BG
     `ogImages.jpg`,
-  ].join("/");
+  ].join('/')
