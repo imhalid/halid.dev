@@ -1,9 +1,14 @@
-import classNames from '../util/classNames'
-import ThemeChange from './themeChange'
-import HomeSVG from './HomeSVG'
 import Link from 'next/link'
+import classNames from '../util/classNames'
+import HomeSVG from './HomeSVG'
+import ThemeChange from './themeChange'
 const Nav = () => {
-  const NavbarLinks = []
+  const NavbarLinks = [
+    {
+      name: 'Bookmarks',
+      href: '/bookmarks',
+    },
+  ]
 
   return (
     <div

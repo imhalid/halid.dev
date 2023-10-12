@@ -1,17 +1,10 @@
 import { useTheme } from 'next-themes'
-import { useState, useEffect } from 'react'
 import { BiSun, BiMoon } from 'react-icons/bi'
 
 const ThemeChange = () => {
   const { systemTheme, theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   function GoTheme() {
-    if (!mounted) return null
     const currentTheme = theme === 'system' ? systemTheme : theme
     if (currentTheme === 'dark') {
       return (

@@ -6,7 +6,8 @@ import { HiOutlineExternalLink, HiCode } from 'react-icons/hi'
 
 const Projects = () => {
   return (
-    <div className='mt-6 pt-6 dark:border-white/30  border-t'>
+    <div className=''>
+      <div className='h-[1px] my-10 bg-gradient-to-r from-transparent via-neutral-500 to-transparent w-full'></div>
       <h1 className='titles'>Projects</h1>
       <div className='grid center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-10'>
         {projects.map((project, index) => {
@@ -19,10 +20,9 @@ const Projects = () => {
                     width={500}
                     quality={100}
                     height={300}
-                    loading='eager'
+                    loading='lazy'
                     className='rounded-xl transition-all  border'
                     style={{ border: '1px solid #eaeaea' }}
-                    objectFit='cover'
                     alt={project.title}
                   />
                   <div className='absolute flex space-x-3 opacity-0  transition-opacity group-hover:opacity-100 bottom-4 left-2'>

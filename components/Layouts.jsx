@@ -1,7 +1,7 @@
-import Nav from './header'
-import Footer from './footer'
 import { motion } from 'framer-motion'
 import classNames from '../util/classNames'
+import Footer from './footer'
+import Nav from './header'
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 50, scale: 1 },
@@ -18,9 +18,10 @@ const Layouts = ({ children }) => {
     >
       <div
         className={classNames(
-          ' h-20 z-1 rounded-3xl md:hidden xl:inline opacity-50 w-40 sm:w-[768px] top-0 absolute bg-gradient-to-r',
+          ' h-20 z-1 rounded-3xl md:hidden xl:inline opacity-50 w-40 sm:w-[768px] top-0 absolute',
         )}
       ></div>
+      <div className='h-20 w-full fixed top-0 z-10 bg-gradient-to-b from-neutral-100 dark:from-neutral-900 to-transparent'></div>
       <div className='fixed top-3 sm:top-6 z-30 w-full'>
         <div
           className={classNames(

@@ -57,11 +57,6 @@ const Home = () => {
           I'm focused on Next.js right now. I love writing CSS and pure
           Javascript, dealing with designs. Looking for a job where I can
           improve myself. <br /> <br />
-          Currently working on{' '}
-          <Link className='font-bold' href='https://www.colorwayxpress.com/'>
-            DoCode
-          </Link>
-          .
         </p>
       </article>
       <style jsx>{`
