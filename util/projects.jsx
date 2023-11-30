@@ -1,5 +1,14 @@
 const projects = [
   {
+    id: 9,
+    name: 'Hikarix',
+    description: 'A wonderfully designed movie search platform with R3F (React Three Fiber).',
+    image: '/projects/hikarix.jpg',
+    link: 'https://github.com/imhalid/hikarix',
+    live: 'https://hikarix.vercel.app',
+    tags: ['R3F', 'Next.js', 'CSS', 'API', 'TypeScript'],
+  },
+  {
     id: 8,
     name: 'CV Builder',
     description:
