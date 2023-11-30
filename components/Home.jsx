@@ -26,7 +26,7 @@ const Home = () => {
           of my photos can be found on{' '}
           <Link
             className='cursor-ne-resize  font-bold'
-            href='https://www.instagram.com/isuraka/'
+            href='https://www.instagram.com/halidislm/'
           >
             Instagram.
           </Link>
@@ -43,7 +43,7 @@ const Home = () => {
             href='https://twitter.com/halidislm'
             className='cursor-ne-resize  font-bold'
           >
-            Twitter
+            Twitter{' '}
           </Link>
           and{' '}
           <Link
@@ -54,8 +54,7 @@ const Home = () => {
           </Link>
         </p>
         <p>
-          I'm focused on Next.js right now. I love writing CSS and pure
-          Javascript, dealing with designs. Looking for a job where I can
+          I'm focused on Next.js right now. I love writing code, dealing with designs. Looking for a job where I can
           improve myself. <br /> <br />
         </p>
       </article>
