@@ -22,7 +22,7 @@ const Projects = () => {
                     height={300}
                     loading='lazy'
                     className='rounded-xl transition-all  border'
-                    style={{ border: '1px solid #eaeaea' }}
+                    style={{ border: '1px solid #3b3b3b' }}
                     alt={project.title}
                   />
                   <div className='absolute flex space-x-3 opacity-0  transition-opacity group-hover:opacity-100 bottom-4 left-2'>
